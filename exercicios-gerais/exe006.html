@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="U-AX-Compatible" content="ie-edge">
+        <title>Exercício 006 - Desconto no produto</title>
+
+        <style>
+            body{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                background-color: #fdeedc;
+            }
+            
+            h2{
+                color: blue;
+            }
+
+            p{
+                font-style: italic;
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        <h1>Lógica de Programação - JavaScript</h1>
+        <h2>Exercício 006 - Desconto no produto</h2>
+
+        <p>
+            Faça um script que receba o valor total de um produto, em seguida exiba <br>
+            o preço desse produto depois de receber 5% de desconto no preço.
+        </p>
+    </body>
+
+    <script>
+        //digite o valor total do produto:
+        var valor = prompt('Digite o valor total do produto: R$');
+        valor = parseFloat(valor);
+        //descontando 5%
+        var desconto = valor - (valor * 5) / 100;
+        
+        //apresente o resultado
+        alert(`O valor de R$${valor} com um desconto de 5%, passa a ser R$` + desconto)
+        
+    </script>
+
+</html>

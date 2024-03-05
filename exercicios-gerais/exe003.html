@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="U-AX-Compatible" content="ie-edge">
+        <title>Exercício 003 - Média do Aluno</title>
+
+        <style>
+            body{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                background-color: #fdeedc;
+            }
+            
+            h2{
+                color: blue;
+            }
+
+            p{
+                font-style: italic;
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        <h1>Lógica de Programação - JavaScript</h1>
+        <h2>Exercício 003 - Média do Aluno</h2>
+
+        <p>
+            Faça um script que receba as duas notas de um aluno e em seguida<br>
+            tire a média das notas e exiba o resultado final..
+        </p>
+    </body>
+
+    <script>
+        //digite as notas do aluno:
+        var nota1 = prompt('Nota do primeiro bimestre: ');
+        nota1 = parseFloat(nota1);
+        var nota2 = prompt('Nota do segundo bimestre: ');
+        nota2 = parseFloat(nota2);
+        var nota3 = prompt('Nota do terceiro bimestre: ');
+        nota3 = parseFloat(nota3);
+        var nota4 = prompt('Nota do quarto bimestre: ');
+        nota4 = parseFloat(nota4);
+        
+        //calcule a media
+        var media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+        //exibindo o resultado
+        alert(`Com as notas ${nota1}, ${nota2}, ${nota3} e ${nota4}, a média final do aluno foi `  + media);
+        
+    </script>
+
+</html>

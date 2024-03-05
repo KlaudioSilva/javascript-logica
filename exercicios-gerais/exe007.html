@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="U-AX-Compatible" content="ie-edge">
+        <title>Exercício 007 - Aumento salarial</title>
+
+        <style>
+            body{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                background-color: #fdeedc;
+            }
+            
+            h2{
+                color: blue;
+            }
+
+            p{
+                font-style: italic;
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        <h1>Lógica de Programação - JavaScript</h1>
+        <h2>Exercício 007 - Aumento salarial</h2>
+
+        <p>
+            Faça um script que vai receber o nome do funcionário, o salário atual, em <br>
+            seguida qual será o valor em % do rejuste do salário. <br>
+            Por fim, exiba os resultados.
+        </p>
+    </body>
+
+    <script>
+        //o nome do funcionário
+        var nome = prompt('Qual é o nome do funcionário? ');
+        //o salario atual
+        var salAtual = prompt('Qual é o seu salário atual? R$');
+        salAtual = parseFloat(salAtual);
+        //total de reajuste
+        var reajuste = prompt('Qual será a % do reajuste no salário: ')
+        reajuste = parseInt(reajuste);
+
+        //valor do salário reajustado
+        var novoSal = salAtual + (salAtual * reajuste) / 100;
+        
+        alert(`O novo salário do funcionário ${nome}, agora é R$` + novoSal + ` mensais.`)
+        
+    </script>
+
+</html>
