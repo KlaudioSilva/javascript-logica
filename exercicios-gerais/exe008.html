@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="U-AX-Compatible" content="ie-edge">
+        <title>Exercício 008 - Não fume</title>
+
+        <style>
+            body{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                background-color: #fdeedc;
+            }
+            
+            h2{
+                color: blue;
+            }
+
+            p{
+                font-style: italic;
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        <h1>Lógica de Programação - JavaScript</h1>
+        <h2>Exercício 008 - Não fume</h2>
+
+        <p>
+            Crie um script que pergunte há quantos anos você fuma e quantos cigarros você fuma por dia.
+        </p>
+        <p>
+            Em seguida o programa vai exibir quantos cigarros você já fumou até hoje e uma <br>
+            estimativa de quantos dias você vai perder na sua vida por causa desse vício.
+        </p>
+        <p>
+            <strong>Obs: Calcula-se que cada cigarro reduz em 10 minutos de vida.</strong>
+        </p>
+    </body>
+
+    <script>
+        //entrada de dados
+        var anos = prompt('Há quantos anos você fuma? ');
+        anos = parseInt(anos);
+        var cigarros = prompt('Quantos cigarros você fuma por dia? ');
+        cigarros = parseInt(cigarros);
+
+        //quantos cigarros já fumou nesses anos
+        var totCigarros = cigarros * 365 * anos;
+        //quantos dias perdidos (1 dia tem 1440 minutos)
+        var dias = totCigarros * 10 / 1440; 
+
+        //arredondando os dias
+        var diasPerd = parseFloat(dias.toFixed(2));
+        
+        //exibindo os resultados
+        alert(`Por fumar ${cigarros} cigarros por dia em ${anos} anos, você perdeu ` + diasPerd + ` dias de vida.`)
+    </script>
+
+</html>
