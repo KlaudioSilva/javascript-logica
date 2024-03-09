@@ -13,14 +13,42 @@
             /*
               -> fazer jogador1 digitar um número
               -> fazer o jogador2 digitar outro número
-              -> se forem iguais, mostrar a mensagem 'empate'
-              -> sortear um número entre 0 e 1
+              -> se forem iguais, mostrar a mensagem 'empate' e encerra o programa
+              -> se forem diferentes, sortear um número entre 0 e 1
 
               -> se o número sorteado for 0, ganha quem escolher o número MENOR
 
               -> se o número sorteado for 1, ganha quem escolher o número MAIOR
             */
             
+            //entrada dos números
+            var jogador1 = prompt('jogador 1, digite seu número: ');
+            jogador1 = parseInt(jogador1);
+            var jogador2 = prompt('jogador 2, digite seu número: ');
+            jogador2 = parseInt(jogador2);
+
+            //os número são iguais?
+            if(jogador1 === jogador2){
+                alert('deu EMPATE!');
+            } else{
+                //sorteio entre 0 e 1
+                var num = parseInt(Math.random() * 2);
+                
+                //se o número for 0
+                if(num === 0){
+                    if(jogador1 < jogador2){
+                        alert('jogador 1 VENCEU!');
+                    } else {
+                        alert('jogador 2 VENCEU!');
+                    }
+                } else{  //se o número for 1
+                    if(jogador1 > jogador2){
+                        alert('jogador 1 VENCEU!');
+                    } else{
+                        alert('jogador 2 VENCEU!');
+                    }
+                }
+            }
 
         </script>
     </body>
