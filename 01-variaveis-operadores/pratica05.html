@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="U-AX-Compatible" content="ie-edge">
+        <title>Prática 05</title>
+    </head>
+    <body>
+        <h1>Lógica de Programação com JavaScript</h1>
+
+        <p>
+            <strong>Exercício Proposto:</strong><br>
+            <em>Para esse exercício, tente resolver a lógica que fizemos em um exercício anterior, de modo a torná-la mais curta.<br>
+            Essa tarefa tem por objetivo te fazer pensar em como solucionar MELHOR um problema.<br>
+            Não tem um resposta certa ou errada. Aqui vale exercitar a lógica.</em>
+        </p>
+
+        <script>
+            //entrada de dados
+            var jogador1 = prompt('número do jogador 1: ');
+            jogador1 = parseInt(jogador1)
+            var jogador2 = prompt('número do jogador 2: ');
+            jogador2 = parseInt(jogador2);
+
+            //número iguais:
+            if(jogador1 === jogador2){
+                alert('vocês empataram!');
+            } else{
+                //sorteando um número entre 0 e 1:
+                var sorteio = parseInt(Math.random() * 2);
+                alert('Sorteado: ' + sorteio);
+
+            if(sorteio === 0 && jogador1 < jogador2 || sorteio === 1 && jogador1 > jogador2){
+                alert('jogador 1 venceu!');
+            } else{
+                alert('jogador 2 venceu!');
+            }
+            }
+
+        </script>
+    </body>
+</html>
