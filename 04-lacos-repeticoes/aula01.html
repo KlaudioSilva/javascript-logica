@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="U-AX-Compatible" content="ie-edge">
+        <title>Aula - Lógica de Programação com JavaScript</title>
+    </head>
+    <body>
+        <h1>Lógica de Programação com JavaScript</h1>
+        <h2>Laços de Repetiçoes - Aula 1</h2>
+        <h3>Loop WHILE para tabuada</h3>
+
+        <script>
+            var num = prompt('digite um número');
+            num = parseFloat(num);
+
+            var indice = 1;
+            //repita enquanto o indice seja <= 20
+            while(indice <= 20){
+                document.write(num + ' x ' + indice + ' = ' + (num * indice) + '<br>');
+                indice = indice + 1;
+            }
+            document.write('fim do loop')
+        </script>
+    </body>
+</html>
