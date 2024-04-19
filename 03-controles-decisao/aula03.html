@@ -8,11 +8,11 @@
     </head>
     <body>
         <h1>Lógica de Programação: Controles de Decisão</h1>
-        <h2>Aula 01 - If/else</h2>
+        <h2>Aula 03 - If/else</h2>
         <h3>Vamos resolver um problema?</h3>
 
         <p>
-            Foi pedido para o usuário digitar dois números entre 0 e 10, mas o engraçadinho digitou 15. Como resolver?
+            Foi pedido para o usuário digitar dois números de 0 à 10 mas uma pessoa se enganou e digitou um número negativo. Como resolver?
         </p>
 
         <script>
@@ -20,14 +20,18 @@
             let n1 = parseFloat(prompt('digite um número entre 0 e 10: '))
             let n2 = parseFloat(prompt('digite outro número entre 0 e 10: '))
             
-            //calcular a média
-            let med = (n1 + n2) / 2
+            if(n1 <= 10 && n2 <= 10 && n1 >= 0 && n2 >= 0){
+                //calcular a média
+                let med = (n1 + n2) / 2
 
-            //mostar mensagem
-            if(med > 4){
-                alert('APROVADO!')
+                //mostar mensagem
+                if(med > 4){
+                    alert('APROVADO!')
+                } else{
+                    alert('REPROVADO!')
+                }
             } else{
-                alert('REPROVADO!')
+                alert('digite apenas números entre 0 e 10!')
             }
             alert('Fim do programa.')
             

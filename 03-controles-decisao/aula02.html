@@ -8,7 +8,7 @@
     </head>
     <body>
         <h1>Lógica de Programação: Controles de Decisão</h1>
-        <h2>Aula 01 - If/else</h2>
+        <h2>Aula 02 - If/else</h2>
         <h3>Vamos resolver um problema?</h3>
 
         <p>
@@ -19,17 +19,37 @@
             //pedir ao usuário doi números
             let n1 = parseFloat(prompt('digite um número entre 0 e 10: '))
             let n2 = parseFloat(prompt('digite outro número entre 0 e 10: '))
-            
-            //calcular a média
-            let med = (n1 + n2) / 2
 
-            //mostar mensagem
-            if(med > 4){
-                alert('APROVADO!')
+            //se o usuário digitar valores incorretos
+            if(n1 > 10 || n2 > 10){
+                alert('digite apenas números menores do que 10!')
             } else{
-                alert('REPROVADO!')
+                //calcular a média
+                let med = (n1 + n2) / 2
+                //mostar mensagem
+                if(med > 4){
+                    alert('APROVADO!')
+                } else{
+                    alert('REPROVADO!')
+                }
             }
             alert('Fim do programa.')
+
+            //OUTRA FORMA DE FAZER:
+            /*
+            
+            if(n1 <= 10 && n2 <= 10){
+                let med = (n1 + n2) / 2
+                if(med > 4 && n1 > 0 && n2 > 0){
+                    alert('APROVADO!')
+                } else{
+                    alert('REPROVADO!')
+                }
+            } else{
+                alert('digite apenas números menores do que 10!')
+            }
+            
+            */
             
         </script>
     </body>

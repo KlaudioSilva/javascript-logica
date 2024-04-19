@@ -17,7 +17,18 @@
         </p>
 
         <script>
-            
+            //entrada de valores
+            let n1 = parseFloat(prompt('digite a primeira nota: '))
+            let n2 = parseFloat(prompt('digite a segunda nota: '))
+            //encontrando a média
+            let med = (n1 + n2) / 2
+
+            //mostre APROVADO ou REPROVADO
+            if(med > 4 && n1 != 0 && n2 != 0){
+                alert('APROVADO!')
+            } else {
+                alert('REPROVADO!')
+            }
         </script>
     </body>
 </html>
