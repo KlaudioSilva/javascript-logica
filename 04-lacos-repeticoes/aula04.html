@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="U-AX-Compatible" content="ie-edge">
+        <title>Aula - Lógica de Programação com JavaScript</title>
+    </head>
+    <body>
+        <h1>Lógica de Programação - Laços de Repetições</h1>
+        <h2>Aula 4 - loop For</h2>
+        <h3>Vamos resolver um problema?</h3>
+
+        <p>
+            Vamos reescrever o algoritmo anterior, usando agora o comando <strong>FOR</strong>.<br>
+            Pedir ao usuário para digitar um número e mostre a tabuada desse número de 0 a 1000.
+        </p>
+
+        <script>
+            //entrada de dados
+            var num = prompt('digite um número');
+            num = parseFloat(num);
+
+            //usando o loop FOR
+            document.write('inicio do loop FOR:<br>')
+
+            if(!isNaN(num)){
+                for(let i = 1; i <=1000; i++){
+                    document.write(num + ' x ' + i + ' = ' + (num * i) + '<br>')
+                }
+
+                document.write('<br>fim do loop FOR<br>')
+                document.write('------------------------------------------------------------------------------------------------------- <br>')
+            } else{
+                alert('você não digitou um valor numérico.')
+            }
+        
+        </script>
+    </body>
+</html>

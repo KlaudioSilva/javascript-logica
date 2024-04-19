@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="U-AX-Compatible" content="ie-edge">
+        <title>Aula - Lógica de Programação com JavaScript</title>
+    </head>
+    <body>
+        <h1>Lógica de Programação - Laços de Repetições</h1>
+        <h2>Aula 3 - loop While</h2>
+        <h3>Vamos resolver um problema?</h3>
+
+        <p>
+            Pedir ao usuário para digitar um número e mostre a tabuada desse número de 0 a 1000.
+        </p>
+
+        <script>
+            //entrada de dados
+            var num = prompt('digite um número');
+            num = parseFloat(num);
+
+            var indice = 1;
+
+            if(!isNaN(num)){
+                //faça enquanto o indice seja <= 1000
+                while(indice <= 1000){
+                    document.write(num + ' x ' + indice + ' = ' + (num * indice) + '<br>')
+                    indice += 1
+                }
+                document.write('fim do loop WHILE<br><br>')
+
+                document.write('------------------------------------------------------------------------------------------------------- <br>')
+            } else{
+                alert('você não digitou um valor numérico.')
+            }
+        
+            /*
+            //usando o loop FOR
+            document.write('inicio do loop FOR:<br>')
+            //enquanto o i for <= 50
+            for(var i = 1; i <= 50; i++){
+                document.write(num + ' x ' + i + ' = ' + (num * i) + '<br>');
+            }
+            document.write('fim do loop FOR')*/
+        </script>
+    </body>
+</html>
