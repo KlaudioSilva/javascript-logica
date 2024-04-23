@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="U-AX-Compatible" content="ie-edge">
+        <title>Aula - Lógica de Programação com JavaScript</title>
+    </head>
+    <body>
+        <h1>Lógica de Programação - Laços de Repetições</h1>
+        <h2>Aula 6 - loop Do While</h2>
+        <h3>Vamos resolver um problema?</h3>
+
+        <p>
+            Pedir ao usuário para digitar um número e mostrar todos os números pares do 2 (inclusive) até o número que o usuário digitou.
+        </p>
+
+        <script>
+            let num = parseInt(prompt('digite um número: '))
+            let i = 2
+
+            /*
+            while(i <= 2){
+                alert(i)
+                i += num
+            }
+            */
+
+            do{
+                alert(i)
+                i += 2
+            } while(i <= num)
+
+            
+            /******************************************************************************
+             *                           PARA NÃO ESQUECER:                               *
+             * 1. Um loop SEMPRE precisa ter uma condição de saída                        *
+             * 2. Loop FOR: ideal para quando sabemos exatamente quantas vezes o loop     *
+             *    será executado                                                          *
+             * 3. Loop WHILE: ideal para quando não sabemos quantas vezes o loop será     *
+             *    executado. Além disso, e a condição for false, não executa nenhuma vez  *
+             * 4. Loop DO.. WHILE: se parece com o loop While, mas o código é executado   *
+             *    ao menos uma vez, mesmo que a condição seja inicialmente false.         *
+            */
+
+        </script>
+    </body>
+</html>

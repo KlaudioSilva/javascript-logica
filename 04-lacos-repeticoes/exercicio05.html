@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="U-AX-Compatible" content="ie-edge">
+        <title>Aula - Lógica de Programação com JavaScript</title>
+    </head>
+    <body>
+        <h1>Lógica de Programação com JavaScript</h1>
+        <p><strong>Exercício Proposto:</strong></p>
+        <p>
+            Mostre na tela todos os anos a partir de 1004 até o ano 2024, pulando de quatro em quatro anos.<br>
+            Por exemplo:<br>
+            1004<br>
+            1008<br>
+            1012<br>
+            E assim por diante.
+            É como mostrar os anos bissextos, mas sem as regras para descobrir se um ano é bissexto ou não.(vamos imaginar que se o ano é múltiplo de quatro, ele é bissexto).
+        </p>
+        <br>
+        <hr>
+
+        <script>
+            for(let a = 1004; a <= 2024; a += 4){
+                document.write(a + '<br>')
+            }
+        </script>
+
+    </body>
+</html>

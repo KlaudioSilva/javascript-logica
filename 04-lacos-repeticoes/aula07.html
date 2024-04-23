@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="U-AX-Compatible" content="ie-edge">
+        <title>Aula - Lógica de Programação com JavaScript</title>
+    </head>
+    <body>
+        <h1>Lógica de Programação - Laços de Repetições</h1>
+        <h2>Aula 7 - Break / Continue</h2>
+        <h3>Vamos resolver alguns problemas?</h3>
+
+        <p>
+            1º Percorra um loop de 1 a 10 e interrompa a execução quando o valor for igual a 5.<br>
+            2º Percorra um loop de 1 a 10 mas "pule" o número 5. SPOILER: cuidado com loops infinitos.
+        </p>
+
+        <script>
+            document.write('Loop - usando o Break<br>')
+            for(i = 1; i <= 10; i++){
+                document.write(i + '<br>')
+                if(i === 5){
+                    break  //ele encerra o loop
+                }
+            }
+            document.write('fim do loop.<br>')
+            document.write('-=-=-=-=-=-=-=-=-=-=-=-=-=-<br><br>')
+
+            document.write('Loop - usando o Continue<br>')
+            for(l = 1; l <= 10; l++){
+                if(l === 5){
+                    continue  //ele continua a partir da próxima interação
+                }
+                document.write(l + '<br>')
+            }
+            document.write('fim do loop.<br>')
+            document.write('-=-=-=-=-=-=-=-=-=-=-=-=-=-<br><br>')
+
+        </script>
+    </body>
+</html>
