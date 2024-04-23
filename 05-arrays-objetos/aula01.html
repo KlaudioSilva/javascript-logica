@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="U-AX-Compatible" content="ie-edge">
+        <title>Aula - Lógica de Programação com JavaScript</title>
+    </head>
+    <body>
+        <h1>Lógica de Programação - Laços de Repetições</h1>
+        <h2>Aula 1 - Introdução à Arrays</h2>
+        <h3>Vamos resolver um problema?</h3>
+
+        <p>
+            Precisamos ter uma espécie de lista de nomes e mostrar na tela todos esses nomes.
+        </p>
+
+        <script>
+            //existem duas formas para se criar listas:
+            //a primeira é chamada de 'literal', é uma forma mais usada
+            let nomes1 = ["Klaudio", "Elma", "João Pedro", "Arthur"]  //sintaxe literal
+
+            //a segunda é chamada de 'sintaxe função construtora'
+            let nomes2 = new Array("Arthur", "João Pedro", "Elma", "Klaudio")
+
+            //usando um loop para percorrer o array
+            for(let i = 0; i < nomes1.length; i++){
+                document.write('nome: ' + nomes1[i] + '<br>')
+            }
+        
+        </script>
+    </body>
+</html>
