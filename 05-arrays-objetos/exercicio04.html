@@ -10,18 +10,15 @@
         <h1>Lógica de Programação com JavaScript</h1>
         <p><strong>Exercício Proposto:</strong></p>
         <p>
-            Dado um array contendo os dias da semana, mostre em alert qual é o dia atual.
+            Dado um array que pode conter valores de tipos diferentes, mostre qual é o valor que está no meio (pode ser aproximado).
         </p>
         <hr>
         <br>
 
         <script>
-            const semana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"]
-
-            const hoje = new Date() //os 7 dias da semana (0, 1, 2, 3...)
-            const diaSemana = hoje.getDay()  //pega o dia de hoje (sabado = 7)
-            alert(diaSemana)
-            alert('Hoje é ' + semana[diaSemana])  //msg exibindo o dia de hoje
+            const nums = [5, 8, 'Klaudio', 3, false, 4, 1, 23, true, 15]  //total da soma dos números é 59
+            let meio = parseInt(nums.length / 2)
+            document.write('o elemento que está no meio é o ' + nums[meio])
         </script>
 
     </body>

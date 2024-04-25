@@ -7,28 +7,24 @@
         <title>Aula - Lógica de Programação com JavaScript</title>
     </head>
     <body>
-        <h1>Lógica de Programação - Laços de Repetições</h1>
-        <h2>Aula 3 - Como duplicar uma array</h2>
+        <h1>Lógica de Programação - Arrays e Objetos</h1>
+        <h2>Aula 3 - O que é um Objeto</h2>
         <h3>Vamos resolver um problema?</h3>
 
         <p>
-            Dado um array de números, crie outro array contendo os números multiplicados por 2.
+            Mostrar na tela os dados de um produto específico que estão agrupados em um objeto.<br>
+            Os dados que devem ser mostrados são:<br>
+            <strong>nome</strong>, <strong>preço</strong> e <strong>quantidade</strong> em estoque
         </p>
 
         <script>
-            //primeiro array
-            let num1 = [6, 2, 8, 14, 34, 19, 21, 33, 4, 7]
-            let num2 = []
-
-            for(let n = 0; n < num1.length; n++){
-                let num = num1[n] * 2
-                document.write('número: ' + num1[n] + '<br>')
-
-                num2.push(num)  //método push() 'empurra' um novo numero
-                //num2[num2.length] = num
-                document.write('multiplicado: ' + num + '<br>')  //exiba o número multiplicado
+            const caneta = {
+                nome: 'caneta',
+                preco: 1.5,
+                quantidade: 10
             }
-            console.log(num)
+            //usando a formatação com template strings
+            document.write(`${caneta.nome} custa R$${caneta.preco} e há ${caneta.quantidade} unidades no estoque.`)
         </script>
     </body>
 </html>

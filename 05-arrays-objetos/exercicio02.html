@@ -10,18 +10,21 @@
         <h1>Lógica de Programação com JavaScript</h1>
         <p><strong>Exercício Proposto:</strong></p>
         <p>
-            Dado um array contendo os dias da semana, mostre em alert qual é o dia atual.
+            Dado um array de números, mostre num alert a soma de todos eles.
         </p>
         <hr>
         <br>
 
         <script>
-            const semana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"]
+            const nums = [5, 8, 10, 3, 9, 4, 1, 0, 3]  //total da soma dos números é 43
+            let soma = 0
 
-            const hoje = new Date() //os 7 dias da semana (0, 1, 2, 3...)
-            const diaSemana = hoje.getDay()  //pega o dia de hoje (sabado = 7)
-            alert(diaSemana)
-            alert('Hoje é ' + semana[diaSemana])  //msg exibindo o dia de hoje
+            for(let i = 0; i < nums.length; i++){
+                let n = nums[i]
+                soma = soma + n
+               // inteiro
+            }
+            document.write('total da soma dos números no array é ' + soma)
         </script>
 
     </body>

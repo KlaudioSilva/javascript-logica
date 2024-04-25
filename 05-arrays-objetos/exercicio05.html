@@ -10,18 +10,22 @@
         <h1>Lógica de Programação com JavaScript</h1>
         <p><strong>Exercício Proposto:</strong></p>
         <p>
-            Dado um array contendo os dias da semana, mostre em alert qual é o dia atual.
+            Dado um array de números, mostre a soma dos números ímpares.
         </p>
         <hr>
         <br>
 
         <script>
-            const semana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"]
+            const nums = [8, 5, 9, 2, 4, 10, 38, 11, 6, 44, 0, 25, 7]  //total da soma dos números ímpares é 57
+            let soma = 0
+            for(i = 0; i < nums.length; i++){
+                let n = nums[i]
 
-            const hoje = new Date() //os 7 dias da semana (0, 1, 2, 3...)
-            const diaSemana = hoje.getDay()  //pega o dia de hoje (sabado = 7)
-            alert(diaSemana)
-            alert('Hoje é ' + semana[diaSemana])  //msg exibindo o dia de hoje
+                if(n % 2 !== 0){  //se os números são ímpares
+                    soma += n
+                }
+            }
+            document.write('a soma dos números ímpares foi ' + soma)
         </script>
 
     </body>

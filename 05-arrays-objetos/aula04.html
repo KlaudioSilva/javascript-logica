@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="U-AX-Compatible" content="ie-edge">
+        <title>Aula - Lógica de Programação com JavaScript</title>
+    </head>
+    <body>
+        <h1>Lógica de Programação - Arrays e Objetos</h1>
+        <h2>Aula 3 - O que é um Objeto</h2>
+        <h3>Vamos resolver um problema?</h3>
+
+        <p>
+            Dado o seguinte ojbeto:<br><br>
+            <em>
+                const carro = {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;modelo: "Uno",<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;ano: 2023,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;km: 10000,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;combustível: "gasolina",<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;litrosConsumidos: 625<br>
+                }
+            </em><br><br>
+            Mostre a seguinte mensagem na tela:<br>
+            <em>"O carro Uno 2023 fez em média xxx Km/l de gasolina</em>
+        </p>
+        <span>---------------------------------------------------------------------------------</span>
+        <p>
+            Depois adicione a propriedade 'marca' mostre na tela:<br>
+            <em>
+                const carro2 = {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;marca: "Chevrolet",<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;modelo: "Corsa",<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;ano: 2024,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;km: 15000,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;combustível: "gasolina",<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;litrosConsumidos: 750<br>
+                }
+            </em><br><br>
+            <em>"O carro Chevrolet Corsa ano 2024 fez em média xxx Km/L de gasolina.</em>
+        </p>
+        <hr>
+
+        <script>
+            const carro = {
+                modelo: 'Uno',
+                ano: 2023,
+                km: 10000,
+                combustível: 'gasolina',
+                litrosConsumidos: 625
+            }
+
+            let consumo = (10000 / 625)
+
+            document.write('1ª mensagem:<br>')
+            document.write(`O carro ${carro.modelo} ano ${carro.ano} fez em média ` + consumo + `Km/L de ${carro.combustível}.`)
+
+            document.write('<br><br>-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-<br>')
+
+            const carro2 = {
+                marca: 'Chevrolet',
+                modelo: 'Corsa',
+                ano: 2024,
+                km: 15000,
+                combustível: 'gasolina',
+                litrosConsumidos: 750
+            }
+
+            document.write('2ª mensagem:<br>')
+            document.write(`O outro carro de marca ${carro2.marca}, modelo ${carro2.modelo} ano ${carro2.ano} fez em média ${carro2.km/carro2.litrosConsumidos}Km/L de ${carro2.combustível}.`)
+        </script>
+    </body>
+</html>
