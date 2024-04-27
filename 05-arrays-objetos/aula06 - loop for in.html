@@ -7,8 +7,8 @@
         <title>Aula - Lógica de Programação com JavaScript</title>
     </head>
     <body>
-        <h1>Lógica de Programação - acessar a propriedade de objeto dentro de outro objeto</h1>
-        <h2>Aula 5 - Objetos</h2>
+        <h1>Lógica de Programação - loop for in</h1>
+        <h2>Aula 6 - Objetos</h2>
         <h3>Vamos resolver um problema?</h3>
 
         <p>
@@ -23,7 +23,8 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;numero: 302<br>
                 }
             </em><br><br>
-            Adicione uma propriedade chamada endereço em pessoa que 'aponte' para o objeto endereco
+            1º Mostre no console todas as propriedades do objeto pessoa.
+            2º Mostre no console todas as propriedades e seus respectivos valores do objeto pessoa.
         </p>
         
         <hr>
@@ -43,6 +44,22 @@
             //console.log(pessoa)
 
             document.write(`${pessoa.nome} ${pessoa.sobrenome} reside no bairro ${endereco.bairro} na ${endereco.logradouro}, número ${endereco.numero}.`)
+
+            //loop for.. in serve para interagir com um objeto
+            document.write('<br>-----------------------------------------------------------<br>')
+            for(let prop in pessoa){
+                console.log(prop)
+            }
+
+            //loop for.. in serve para interagir com um objeto
+            document.write('<br>-----------------------------------------------------------<br>')
+            for(let prop2 in pessoa){
+                //console.log(pessoa)
+                console.log(pessoa[prop2])
+                //1 - 'nome' - pessoa['nome'] - pessoa.nome
+                //2 - 'sobrenome' - pessoa[sobrenome] - pessoa.sobrenome
+                //3 - 'endereco' pessoa['endereco'] - pessoa.endereco
+            }
         </script>
     </body>
 </html>
