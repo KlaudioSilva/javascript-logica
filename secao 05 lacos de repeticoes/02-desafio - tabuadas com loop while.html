@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loop While</title>
+    </head>
+    <body>
+        
+        <h1>Desafio - Tabuadas usando o While</h1>
+        <p>
+            Pedir ao usuário para digitar alguns números e mostrar <br>
+            as tabuadas desses números de 0 a 50.
+        </p>
+
+        <script>
+            let num1 = parseInt(prompt('Digite um número para nossa 1ª tabuada: '));
+            let num2 = parseInt(prompt('Digite um número para nossa 2ª tabuada: '));
+            let num3 = parseInt(prompt('Digite um número para nossa 3ª tabuada: '));
+            let cont1 = 0;  //contador do loop
+            let cont2 = 0;  //contador do loop
+            let cont3 = 0;  //contador do loop
+
+            document.write('A primeira tabuada é do número: ' +  num1 + "<br>");
+            while(cont1 <= 50){
+                document.write(num1 + " x " + cont1 + " : " + num1 * cont1 + "<br>");
+                cont1++;
+            }
+
+            document.write('-------------------------------------------<br><br>');
+
+            document.write('A segunda tabuada é do número: ' + num2 + '<br>');
+            while(cont2 <= 50){
+                document.write(num2 + ' x ' + cont2 + ' : ' + num2 * cont2 + '<br>');
+                cont2++;
+            }
+
+            document.write('-------------------------------------------<br><br>');
+
+            document.write('A terceira tabuada é do número: ' + num3 + '<br>');
+            while(cont3 <= 50){
+                document.write(num3 + ' x ' + cont3 + ' : ' + num3 * cont3 + '<br>');
+                cont3++;
+            }
+
+            document.write('-------------------------------------------<br><br>');
+            document.write('Fim das Tabuadas <br><br>');
+            
+        </script>
+
+    </body>
+</html>

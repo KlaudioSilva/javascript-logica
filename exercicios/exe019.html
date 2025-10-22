@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 019</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 019 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Agora o professor quer sortear a ordem de apresentação de trabalhos dos alunos. <br>
+            Faça um programa que leia os nomes e mostre a ordem sorteada.
+        </p>
+        <hr>
+
+        <script>
+
+            const lista = [];
+            for(let i = 1; i <= 4; i++){
+                const nome = prompt(`Digite o nome do ${i}º aluno:`);
+                lista.push(nome);
+            }
+
+            //Quem são os alunos da sala
+            document.write('<h3>Nomes dos Alunos:</h3>');
+            lista.forEach((nome, index) => {
+                document.write(`${index + 1}- ${nome}<br>`);
+            });
+
+            //embaralhando os nomes
+            for(let i = lista.length - 1; i > 0; i--){
+                //sorteia um índice j entre 0 e i
+                const j = Math.floor(Math.random() * (i + 1));
+
+                //troca nomes[i] por nomes[j]
+                [lista[i], lista[j]] = [lista[j], lista[i]];
+            }
+
+            document.write('<h3>Ordem da apresentação dos alunos:</h3>');
+            lista.forEach((nome, index) => {
+                document.write(`${index + 1}. ${nome} <br>`);
+            })
+
+        </script>
+
+    </body>
+</html>

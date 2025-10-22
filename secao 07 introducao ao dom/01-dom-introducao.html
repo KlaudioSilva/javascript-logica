@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM - Document Object Model</title>
+
+    </head>
+    <body>
+        <h1 id="titulo">Introdução ao DOM</h1>
+
+        <p id="paragrafo">
+            Este é apenas um parágrafo qualquer que estou usando para ter algum texto nesta página.
+        </p>
+        <p>
+            Estamos agora trabalhando com o <strong>DOM</strong>, ou seja: <em>Document Object Model</em>.
+        </p>
+        <hr>
+
+        <input type="text" id="user" value="valor do campo">
+
+        <script>
+
+            document.getElementById('titulo');
+            let titulo = document.getElementById('titulo');
+
+            console.log(titulo.textContent);
+
+            titulo.textContent = 'Está é uma introdução ao Document Object Model';
+
+            console.log(titulo.textContent);
+
+
+            let user = document.getElementById('user');
+            user.value;
+
+            user.value = 'Nome do usuário';
+            user.value;
+            
+        </script>
+
+    </body>
+</html>

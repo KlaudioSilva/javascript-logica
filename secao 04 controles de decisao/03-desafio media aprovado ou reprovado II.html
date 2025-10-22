@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>If Else</title>
+    </head>
+    <body>
+        
+        <h1>Vamos resolver um problema?</h1>
+        <p>
+            1 - Pedir ao usuário para digitar 2 números e mostrar a mensagem <br>
+            'APROVADO!' caso a média seja maior do que 4 e nenhuma nota seja igual à 0. <br><br>
+
+            2 - Mostre a mensagem 'REPROVADO!' caso a média seja menor ou igual à 4 <br>
+            ou exista pelo menos uma nota igual à 0.
+        </p>
+
+        <script>
+
+            //entrando com os dados
+            let nota1 = parseFloat(prompt('Digite a primeira nota do aluno:'));
+            let nota2 = parseFloat(prompt('Digite a segunda nota do aluno:'));
+
+            //calcule a media
+            let media = (nota1+nota2) / 2;
+
+            //o aluno foi aprovado ou reprovado
+            if(media > 4 && nota1 > 0 && nota2 > 0){
+                alert('APROVADO!');
+            }
+            if(media <= 4 || nota1 == 0 || nota2 == 0){
+                alert('REPROVADO!');
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 034</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button{
+                width: 100px;
+                height: 40px;
+                font-size: 1.5em;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 034 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Desenvolva um programa que leia o comprimento de três retas e diga ao <br>
+            usuário se elas podem ou não formar um triângulo. <br>
+        </p>
+
+        <hr>
+
+        <script>
+
+            let reta1 = parseInt(prompt('Digite o comprimento da primeira reta: '));
+            let reta2 = parseInt(prompt('Digite o comprimento da terceira reta: '));
+            let reta3 = parseInt(prompt('Digite o comprimento da terceria reta: '));
+
+            if(reta1 + reta2 > reta3 && reta1 + reta3 > reta2 && reta2 + reta3 > reta1){
+                document.write(`Com essas três retas É possível formar um triângulo. <br>`);
+            } else {
+                document.write(`Com essas três retas NÃO é possível formar um triângulo. <br>`);
+            }
+
+        </script>
+
+    </body>
+</html>

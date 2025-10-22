@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 018</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 018 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Um professor quer sortear um dos seus quatro alunos para apagar o quadro. <br>
+            Faça um programa que ajude ele, lendo os nomes mostrando o escolhido.
+        </p>
+        <hr>
+
+        <script>
+            /*
+            let n1 = prompt('Primeiro nome: ');
+            let n2 = prompt('Segundo nome: ');
+            let n3 = prompt('Terceiro nome: ');
+            let n4 = prompt('Quarto nome: ');
+            const lista = [n1, n2, n3, n4];
+            
+            for(let i = 0; i <= 3; i++){
+                document.write(lista[i] + '<br>');
+            }
+
+            let escolhido = Math.floor(Math.random() * 4);
+            //document.write(escolhido);
+
+            switch(escolhido){
+                case 0:
+                    console.log(escolhido);
+                    document.write('O aluno escolhido foi ' + n1 + '<br>');
+                    break;
+                case 1:
+                    console.log(escolhido);
+                    document.write('O aluno escolhido foi ' + n2 + '<br>');
+                    break;
+                case 2:
+                    console.log(escolhido);
+                    document.write('O aluno escolhido foi ' + n3 + '<br>');
+                    break;
+                case 3:
+                    console.log(escolhido);
+                    document.write('O aluno escolhido foi ' + n4 + '<br>');
+                    break;
+            }
+            */
+
+            //Versão do código refatorada e otimizada
+            // Solicita os nomes e armazena em uma lista
+            const lista = [];
+            for (let i = 1; i <= 4; i++) {
+                const nome = prompt(`Digite o nome ${i}º:`);
+                lista.push(nome);
+            }
+
+            // Exibe os nomes na tela
+            document.write('<h3>Lista de nomes:</h3>');
+            lista.forEach((nome, index) => {
+            document.write(`${index + 1}. ${nome}<br>`);  //o '+ 1' no index é porque os índices de uma lista sempre iniciam em 0
+            });
+
+            // Sorteia um índice aleatório entre 0 e 3
+            const escolhido = Math.floor(Math.random() * lista.length);
+
+            // Exibe o nome escolhido
+            document.write(`<br><strong>O aluno escolhido foi:</strong> ${lista[escolhido]}<br>`);  //imprime na página
+            alert(`Nome escolhido: ${lista[escolhido]}`);  //mostra um 'alert' com o nome do escolhido
+            console.log(`Índice sorteado: ${escolhido}`); //imprime no console o número do indice do escolhido
+
+
+        </script>
+
+    </body>
+</html>

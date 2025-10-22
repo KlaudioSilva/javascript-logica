@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>exemplo 1 - variavies e tipos</title>
+    </head>
+    <body>
+        
+        <h1>Vamos resolver um problema?</h1>
+        <p>
+            Pedir ao usuário para digitar 2 números inteiros <br>
+            e mostrar a média.
+        </p>
+
+
+        <script>
+            //entrar com os números e fazer a conversão
+            let num1 = prompt('Digitar o primeiro número: ');
+            num1 = parseFloat(num1);
+            let num2 = prompt('Digitar o segundo número: ');  //digitar e já converter
+            num2 = parseFloat(num2);
+
+            //calcular a média:
+            let media = (num1 + num2) / 2;
+            alert('A média entre é: ' + media);
+
+        </script>
+    </body>
+</html>

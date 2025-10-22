@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabela de produtos</title>
+        
+        <!--usando um pouco de css-->
+        <style>
+            table{
+                border-collapse: collapse;
+            }
+
+            table,
+            th,
+            td{
+                border: 1px solid black;
+            }
+
+            th,
+            td{
+                padding: 10px 15px;
+            }
+
+            td+td{
+                text-align: right;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1 id="titulo">Arrays com Objetos II</h1>
+        <h2>Vamos resolver um problema?</h2>
+
+        <p>
+            Dado um array contendo 3 objetos, cada um representando um produto, mostrar em uma tabela (tab 'table') <br>
+            o nome, o preço e a quantidade em estoque de cada produto.
+        </p>
+
+        <table id="tabProdutos">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Qtd em estoque</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <script>
+            
+            const produtos = [ 
+                {nome: 'caneta', preco: 3.25, estoque: 460},
+                {nome: 'lápis', preco: 2.55, estoque: 600},
+                {nome: 'borracha', preco: 1.95, estoque: 320},
+                {nome: 'caderno', preco: 27.25, estoque: 260},
+                {nome: 'corretivo', preco: 3.54, estoque: 180},
+                {nome: 'compasso', preco: 9.89, estoque: 90},
+                {nome: 'estojo', preco: 17.67, estoque: 155},
+                {nome: 'régua', preco: 2.77, estoque: 180}
+            ]
+
+            const tabProdutos = document.getElementById('tabProdutos');
+            for(let i = 0; i < produtos.length; i++){
+                tabProdutos.innerHTML += `<tr>
+                    <td>${produtos[i].nome}</td>
+                    <td>R$${produtos[i].preco.toFixed(2)}</td>
+                    <td>${produtos[i].estoque}</td>
+                    </tr>`
+            }
+
+        </script>
+
+    </body>
+</html>

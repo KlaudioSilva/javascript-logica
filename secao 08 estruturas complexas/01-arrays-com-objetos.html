@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Estruturas Complexas</title>
+        
+    </head>
+    <body>
+        <h1 id="titulo">Arrays com Objetos</h1>
+        <h2>Vamos resolver um problema?</h2>
+
+        <p>
+            Dado um array contendo 5 objetos (onde cada objeto possui duas propriedades "nome" e "email"), <br>
+            mostrar em uma lista não ordenada (ul) cada um desses nomes com seus respectivos emails. <br>
+        </p>
+
+        <ul id="listaPessoas">
+
+        </ul>
+
+        <hr>
+
+        <script>
+            
+            const pessoas = [
+                {nome: 'Klaudio', email: 'klaudio@server.com'},
+                {nome: 'Elma', email: 'elma@server.com'},
+                {nome: 'João Pedro', email: 'joaopedro@server.com'},
+                {nome: 'Arthur', email: 'arthur@server.com'},
+                {nome: 'Otávio', email: 'otavio@server.com'},
+            ]
+
+            const listaPessoas = document.getElementById('listaPessoas');
+
+            for(let i = 0; i < pessoas.length; i++){
+                listaPessoas.innerHTML += `<li>${pessoas[i].nome}: ${pessoas[i].email}</li>`;
+                //listaPessoas.innerHTML += "<li>" +pessoas[i].nome+ ": " +pessoas[i].email+ "</li>";
+            }
+
+        </script>
+
+    </body>
+</html>

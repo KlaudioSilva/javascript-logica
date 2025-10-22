@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 017</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 017 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Faça um programa que leia um angulo qualquer e mostre na tela <br>
+            o valor do seno, cosseno e a tangente desse angulo.
+        </p>
+        <hr>
+
+        <script>
+            
+            let angulo = parseFloat(prompt('Digite um ângulo qualquer: '));
+            //para converter graus para radianos é necessário usar a fórmula: (valor * Math.PI) / 180
+            seno = Math.sin((angulo * Math.PI) / 180);
+            cosseno = Math.cos((angulo * Math.PI) / 180);
+            tangente = Math.tan((angulo * Math.PI) / 180);
+            document.write('O Seno de ' +angulo+ 'º é ' +(seno.toFixed(2))+ '<br>');
+            document.write('O Cosseno de ' +angulo+ 'º é ' +(cosseno.toFixed(2))+ '<br>');
+            document.write('A Tangente de ' +angulo+ 'º é ' +(tangente.toFixed(2))+ '<br>');
+
+
+        </script>
+
+    </body>
+</html>

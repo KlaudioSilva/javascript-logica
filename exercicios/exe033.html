@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 033</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button{
+                width: 100px;
+                height: 40px;
+                font-size: 1.5em;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 033 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Crie um programa que pergunte o salário de um funcionário e calcule <br>
+            o valor de seu aumento. <br>
+            Para salários superiores à R$1.250,00 calcule um aumento de 10%. <br>
+            Para salários inferiores ou iguais, o aumento é de 15%. <br>
+        </p>
+
+        <hr>
+
+        <script>
+
+            //pergunte o salario atual
+            let salario = parseFloat(prompt('Digite qual é o seu salário atual: R$'));
+            let novoSal = 0;
+            let perc = 0;
+
+            if(salario <= 1250){
+                novoSal = salario + (salario * 15) / 100;
+                perc = 15;
+                //console.log(novoSal);
+            } else {
+                novoSal = salario + (salario * 10) / 100;
+                perc = 10;
+                //console.log(novoSal);
+            }
+
+            document.write(`Seu salário após o um aumento de ${perc}% agora é de R$${novoSal.toFixed(2)} <br>`);
+
+        </script>
+
+    </body>
+</html>

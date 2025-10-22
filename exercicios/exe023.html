@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 023</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button{
+                width: 100px;
+                height: 40px;
+                font-size: 1.5em;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 023 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Faça um programa que leia um número de 0 a 9999 e mostre na tela cada um <br>
+            dos seus dígitos separados. ex: 1834 <br>
+               unidade: 4 <br>
+               dezena:  3 <br>
+               centena: 8 <br>
+               milhar:  1 <br>
+        </p>
+
+        <hr>
+
+        <script>
+
+            //passo 1: recebendo o número
+            let num = parseInt(prompt('Digite um valor númerico inteiro entre 0 e 9999:'));
+
+            //passo 2: converter o valor digitado (que é uma string) para número
+            num = Number(num);
+
+            //passo 3: verifica se o número está dentro do intervalo válido
+            if(num >= 0 || num <= 9999){
+
+                //calcula cada parte do número
+                let unidade = Math.floor(num % 10);             //pega o último digito
+                let dezena = Math.floor((num % 100) / 10);      //remove a centena e milhar, pega o segundo digito
+                let centena = Math.floor((num % 1000) / 100);   //remove o milhar, pega o terceiro digito
+                let milhar = Math.floor(num / 1000);            //pega o primeiro digito (milhar)
+
+                //exibe os valores
+                document.write(`Unidade: ${unidade} <br>`);
+                document.write(`Dezena: ${dezena} <br>`);
+                document.write(`Centena: ${centena} <br>`);
+                document.write(`Milhar: ${milhar} <br>`);
+
+            } else {
+                //se o número for inválido, avis o usuário
+                document.write('<strong>ERRO!</strong> Número inválido! Digite um número entre 0 e 9999');
+            }
+            
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM - Document Object Model</title>
+        
+    </head>
+    <body>
+        <h1 id="titulo">Introdução ao DOM</h1>
+        <h2>textContent vs innerHTML</h2>
+
+        <p>
+            A diferença básica é que o textContent não permite o uso das tags HTML. <br>
+            Ao trabalhar com o innerHTML, podemos fazer usos das tags para formatar nosso código html.
+        </p> <br>
+
+        <p id="paragrafo1">
+            Exemplo do texto usando o textContent.
+        </p>
+        <p id="paragrafo2">
+            Exemplo do texto usando o innerHTML.
+        </p>
+        <hr>
+
+        <script>
+            let texto1 = document.getElementById('paragrafo1');
+            texto1.textContent = 'Exemplo do texto usando o <strong>textContent</strong>.'
+            
+            let texto2 = document.getElementById('paragrafo2');
+            texto2.innerHTML = 'Exemplo do texto usando o <strong>innerHTML</strong>.'
+
+        </script>
+
+    </body>
+</html>

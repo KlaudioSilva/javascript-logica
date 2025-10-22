@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arrays</title>
+    </head>
+    <body>
+        <h1>Arrays</h1>
+        <h2>Desafio</h2>
+
+        <p>
+            Dado um array que pode conter valores de tipos diferentes, <br>
+            mostre a soma de todos os números. <br>
+        </p>
+
+        <script>
+
+            const valores = [2, "a", 0, false, 12, '125', 98, 103];
+            let soma = 0;
+
+            for(let i = 0; i < valores.length; i++){
+                if(!isNaN(valores[i]) && typeof valores[i] === "number"){
+                    soma += valores[i];
+                }
+            }
+
+            document.write(`Ao somar um array com os números: [<em>${valores}</em>] temos um total de: <br>`);
+
+            document.write(`TOTAL: <strong>${soma}</strong>. <br>`);
+
+        </script>
+
+    </body>
+</html>

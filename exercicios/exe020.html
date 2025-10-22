@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 020</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button{
+                width: 100px;
+                height: 40px;
+                font-size: 1.5em;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 020 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Faça um programa que abra e reproduza um áudio mp3.
+        </p>
+
+        <audio id="player" src="mp3/Desperately_Seeking_Susan_ST.mp3" autoplay></audio>
+        <button onclick="tocarAudio()">Play</button>
+        <hr>
+
+        <script>
+            function tocarAudio(){
+                const audio = document.getElementById('player');
+                audio.play();
+            }
+            
+        </script>
+
+    </body>
+</html>

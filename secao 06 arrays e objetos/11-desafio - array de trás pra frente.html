@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arrays</title>
+    </head>
+    <body>
+        <h1>Arrays</h1>
+        <h2>Desafio</h2>
+
+        <p>
+            Dado um array de nomes, mostre na tela todos os nomes <br>
+            de trás para frente (o último item do array é o primeiro na página). <br>
+        </p>
+
+        <script>
+
+            const nomes = ['Elma', 'Arthur', 'João Pedro', 'Otávio', 'Klaudio'];
+
+            for(let i = nomes.length - 1; i >= 0; i--){
+                document.write(`nome: ${nomes[i]}<br>`);
+            }
+
+        </script>
+
+    </body>
+</html>

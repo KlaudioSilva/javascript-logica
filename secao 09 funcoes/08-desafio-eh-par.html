@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções</title>
+        
+        <!--usando um pouco de css-->
+        <style>
+            output{
+                font-size: 1.2em;
+                color: darkblue;
+                font-weight: 400;
+            }
+            b{
+                color: red;
+                font-weight: 600;
+                font-size: 1.1em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Funções</h1>
+        <h2>Desafio</h2>
+        <p>
+            Crie uma função que retorne um booleano indicando se um número é par.
+        </p>
+        <hr>
+        
+        <h2>É par?</h2>
+        
+        <label>
+            Número:
+            <input type="number" id="num">
+        </label> <br><br>
+
+        <button onclick="ehPar()">É par?</button> <br><br>
+
+        <output id="output"></output>
+        
+
+        <script>
+            
+            const numero = document.getElementById("num");
+            const output = document.getElementById("output");
+            let num = parseFloat(numero.value);
+            
+            function ehPar(num){
+                return console.log(num % 2 === 0);
+                //return num % 2 === 0;
+            }
+
+            //output.innerHTML = `O resultado dessa função é par: ${ehPar()}.`;
+
+        </script>
+
+    </body>
+</html>

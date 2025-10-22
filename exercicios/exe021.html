@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 021</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button{
+                width: 100px;
+                height: 40px;
+                font-size: 1.5em;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 021 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Trabalhando com strings em Javascript.
+        </p>
+
+        <hr>
+
+        <script>
+
+            let texto = ' Olá, Klaudio! Olá! ';
+
+            //trim() -> remove qualquer espaço vazio que existir no início ou no fim de uma string
+            document.write(texto.trim()); //'Olá, Klaudio! Olá!'
+            document.write('<br>');
+
+            //split() -> divide uma string onde cada palavra recebe uma nova indexação e as inclue em uma lista (no exe: 'partes')
+            let partes = texto.split(''); 
+            document.write(partes); //['', '', 'Olá!', 'Klaudio!', 'Olá!']
+            document.write('<br>');
+
+            /*
+              join() -> "-".join(partes) ou " ".join(partes)
+              Ao contrário do SPLIT() que divide a string em uma nova lista. O join() vai unir as palavras que estão
+              dentro dessa lista.
+            */
+            document.write(partes.join('-'));  //'--Olá,-Klaudio!-Olá!'
+            document.write('<br>');
+            document.write(partes.join('.'));  //'..Olá,.Klaudio!.Olá!'
+            document.write('<br>');
+
+            //replace() -> Substitui a primeira ocorrência (ou todas com regex)
+            document.write(texto.replace('Olá', 'Oi'));  //' Oi, Klaudio! Olá! '
+            document.write('<br>');
+
+            //indexOf() -> indica em que posição aparece o texto escolhido
+            document.write(texto.indexOf('Klaudio'));  //a posição onde começa 'Klaudio'
+            document.write('<br>');
+
+            //contando ocorrências em uma string
+            let ocorrencias = texto.split('Olá').length - 1;
+            document.write(ocorrencias); //2
+            document.write('<br>');
+
+            //transformando todas as letras em maiúsculas
+            document.write(texto.toUpperCase());
+            document.write('<br>');
+
+            //transformando todas as letras em minúsculas
+            document.write(texto.toLowerCase());
+            document.write('<br>');
+
+            //como inverter a frase
+            const frase = 'Olá, sou o Klaudio e estou estudando Javascript!';
+            const picote = frase.split();
+            console.log(picote);
+            console.log(picote[3]);
+            const invertida = frase.split('').reverse().join('');
+            document.write('<strong>Antes:</strong> ' + frase + '<br>')
+            document.write('<strong>Depois:</strong> ' + invertida + '<br>')
+
+            //filtrando palavras ou letras
+            const palavra = 'JavaScript';
+            const filtradas = [...palavra].filter(letra => letra === 'a' || letra === 'p');
+            document.write(filtradas.join('')); //resultado: 'aap'
+            
+        </script>
+
+    </body>
+</html>

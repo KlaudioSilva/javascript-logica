@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arrays</title>
+    </head>
+    <body>
+        <h1>Arrays</h1>
+        <h2>Desafio</h2>
+
+        <p>
+            Dado um array qualquer, mostre na tela um boolean indicando se <br>
+            encontrou um dos seguintes valores nesse array: null, undefined ou NaN. <br>
+        </p>
+
+        <script>
+
+            const numeros = [2, 7, 90, NaN, 34, 1, 9, 0];
+            let encontrou = false;
+
+            for(let i = 0; i < numeros.length; i++){
+                let num = numeros[i];
+                if(num === null || num === undefined || isNaN(num)){
+                    encontrou = true;
+                    break;
+                }
+            }
+
+            document.write(`Encontrou null, undefined ou NaN? ${encontrou} <br>`);
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 011</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 011 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Faça um programa que leia o preço de um produto e mostre <br>
+            o seu novo preço com 5% de desconto.
+        </p>
+        <hr>
+
+        <script>
+            let preco = parseFloat(prompt('Digite o preço do produto R$:'));
+            let novo = preco - ((preco*5) / 100);
+
+            document.write('O produto que custava R$' + preco+ ' com um desconto de 5%, custa agora R$' +novo+ '<br>');
+
+            
+        </script>
+
+    </body>
+</html>

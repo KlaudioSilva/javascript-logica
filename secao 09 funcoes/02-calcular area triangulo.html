@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções</title>
+        
+        <!--usando um pouco de css-->
+        <style>
+            output{
+                font-size: 1.2em;
+                color: blue;
+                font-weight: 400;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Funções</h1>
+        <h2>Vamos resolver um problema?</h2>
+
+        <p>
+            Escrever um programa para calcular a área de um triângulo.
+        </p>
+        
+        <hr>
+        
+        <h2>Área de um triângulo</h2>
+        
+        <label>
+            Base:
+            <input type="number" id="base">
+        </label><br><br>
+        <label>
+            Altura:
+            <input type="number" id="altura">
+        </label>
+
+        <button onclick="btnCalc()">Calcular a área</button> <br><br>
+
+        <output id="output"></output>
+        
+
+        <script>
+            
+            const base = document.getElementById("base");
+            const altura = document.getElementById("altura");
+            const output= document.getElementById("output");
+
+            function btnCalc(){
+                let baseValue = base.value;
+                let alturaValue = altura.value;
+
+                let area = (baseValue * alturaValue) / 2;
+
+                output.innerHTML = `A área do triângulo de base ${baseValue} e altura ${alturaValue} é igual a ${area}.`;
+            }
+
+        </script>
+
+    </body>
+</html>

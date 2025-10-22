@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Desafio - Tabuada com linha divisória por dezena</title>
+    </head>
+    <body>
+        
+        <h1>Desafio</h1>
+        <p>
+            Pedir ao usuário que digite um número e mostrar a tabuada até 50, colocando<br>
+            uma linha divisória ou uma quebra de linha sempre que mudar a dezena.
+        </p>
+        <hr>
+
+        <script>
+            
+            let num = parseInt(prompt('Digite um número inteiro qualquer para nossa tabuada:'))
+
+            for(let i = 1; i <= 50; i++){
+                document.write(num + ' x ' + i + ' = ' + num*i + '<br>');
+                if(i % 10 == 0){
+                    document.write("<br>-------------------<br>")
+                }
+            }
+
+            document.write('<br>-=-=-=- Fim da Tabuada -=-=-=-')
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 029</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button{
+                width: 100px;
+                height: 40px;
+                font-size: 1.5em;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 029 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Escreva um programa que leia a velocidade de um carro. <br>
+            Se ele ultrapassar 80km/h mostre uma mensagem dizendo que ele <br>
+            foi multado. <br>
+            O custo da multa é R$7,00 por cada km/h acima do limite. <br>
+        </p>
+
+        <hr>
+
+        <script>
+
+            let velocidade = parseInt(prompt('Digite a sua velocidade em km/h: '));
+            let multa = 0;
+
+            if(velocidade > 80){
+                let acima = velocidade - 80;  //quantos kms esta acima do permitido
+                multa = (7 * acima);          //calculando o valor da multa baseado em quantos kms acima o motorista esta
+                document.write(`ALERTA! Você foi multado por ultrapassar o limite de 80km/h. <br>`);
+                document.write(`Você estava a ${acima}km/h, além da velocidade permitida. <br>`);
+                document.write(`O valor da multa é R$${multa}. <br>`);
+            } else {
+                document.write(`Tenha um boa viagem! <br>`);
+            }
+
+        </script>
+
+    </body>
+</html>

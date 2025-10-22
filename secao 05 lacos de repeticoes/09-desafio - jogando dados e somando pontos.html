@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Desafio - Jogando Dados</title>
+    </head>
+    <body>
+        
+        <h2>Vamos resolver um problema?</h2>
+        <p>
+            Jogue dois dados quantas vezes forem necessárias até que a soma dos <br>
+            pontos dos dados seja par por 10 vezes. Quantas vezes os dados foram jogados?
+        </p>
+        <hr>
+
+        <script>
+
+            let par = 0;  //quantas vezes deu par
+            let soma = 0; //soma dos dados
+            let cont = 0;  //contador geral
+
+            while(par < 10){
+                let dado1 = parseInt(Math.random() * 6 + 1);
+                let dado2 = parseInt(Math.random() * 6 + 1);
+                console.log('dado1: ' + dado1);
+                console.log('dado2: ' + dado2);
+
+                soma = (dado1+dado2);
+                console.log('soma: ' + soma);
+
+                if(soma % 2 == 0){
+                    par += 1;
+                    console.log('par: ' + par);
+                }
+
+                cont++
+                console.log('cont: ' + cont);
+            }
+
+            document.write('<strong>Quantas vezes os dados foram jogados:</strong> ' + cont + '<br>');
+            
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções</title>
+        
+        <!--usando um pouco de css-->
+        <style>
+            output{
+                font-size: 1.2em;
+                color: darkblue;
+                font-weight: 400;
+            }
+            b{
+                color: red;
+                font-weight: 600;
+                font-size: 1.1em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Funções</h1>
+        <h2>Desafio</h2>
+        <p>
+            Crie uma função que retorne um booleano indicando se um ano é bissexto.
+        </p>
+        <hr>
+        
+        <h2>É Bissexto?</h2>
+        
+
+        <script>
+            
+            function ehBissexto(ano){
+                return ano % 4 === 0 && (ano % 100 !== 0 || ano % 400 === 0);
+            }
+
+            console.log(ehBissexto(2000));
+            console.log(ehBissexto(1900));
+            console.log(ehBissexto(1996));
+            console.log(ehBissexto(2018));
+            console.log(ehBissexto(2025));
+
+        </script>
+
+    </body>
+</html>

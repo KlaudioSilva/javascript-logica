@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 010</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 010 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Faça um programa que leia a largura e a altura de uma parede <br>
+            em metros, calcule sua área e a quantidade de tinta necessária para <br>
+            pintá-la, sabendo que cada litro de tinta pinta uma área de 2m².
+        </p>
+        <hr>
+
+        <script>
+            let largura = parseFloat(prompt('Digite a largura da parede:'));
+            let altura = parseFloat(prompt('Digite a altura da parede:'));
+            let area = (largura*altura);
+            let tinta = area/2;
+
+            document.write('Com uma largura de ' +largura+ 'm e uma altura de ' +altura+ 'm, essa parede tem uma área de ' +area+'m². <br>');
+            document.write('Se 1 litro de tinta pinta 2m², precisaremos de ' +(tinta.toFixed(1))+ 'L para pintar toda essa parede. <br>');
+            
+        </script>
+
+    </body>
+</html>

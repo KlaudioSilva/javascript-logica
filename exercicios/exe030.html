@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 030</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button{
+                width: 100px;
+                height: 40px;
+                font-size: 1.5em;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 030 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Crie um programa que leia um número inteiro e mostre se ele é "PAR" ou "ÍMPAR". <br>
+        </p>
+
+        <hr>
+
+        <script>
+
+            let num = parseInt(prompt('Digite um valor inteiro qualquer: '));
+
+            //descubra se ele é par ou impar
+            if(num % 2 === 0){
+                document.write(`O número ${num}, é um valor <strong>PAR</strong>. <br>`);
+            } else {
+                document.write(`O número ${num}, é um valor <strong>ÍMPAR</strong>. <br>`);
+            }
+
+        </script>
+
+    </body>
+</html>

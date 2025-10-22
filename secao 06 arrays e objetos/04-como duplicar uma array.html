@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arrays</title>
+    </head>
+    <body>
+        <h1>Arrays - Como duplicar uma Array</h1>
+        <h2>Vamos resolver um problema?</h2>
+
+        <p>
+            Dado um array de números, crie uma outra array contendo <br>
+            os números multiplicados por 2. <br>
+        </p>
+
+        <script>
+
+            let numeros = [4, 8, 1, 0, 23, 98, 9, 100, 7];      //array original
+            let multiplicados = [];
+
+            for(let i = 0; i < numeros.length; i++){       //percorrendo a array
+                let numero = numeros[i] * 2;        //multiplicando por 2 cada número dentro da array
+
+                multiplicados.push(numero);         //usando o metodo 'push()', para criar a array multiplicados
+            }
+
+            console.log(multiplicados);
+            document.write(`Array original: ${numeros}<br>`);
+            document.write(`Array com os valores multiplicados por 2: ${multiplicados}<br>`);
+
+        </script>
+
+    </body>
+</html>

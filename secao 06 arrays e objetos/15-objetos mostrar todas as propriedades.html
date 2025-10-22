@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Objetos</title>
+    </head>
+    <body>
+        <h1>Objetos</h1>
+        <h2>Vamos resolver um problema?</h2>
+
+        <p>
+            Dados os seguintes objetos: <br>
+
+            <em>const endereco = { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;logradouro: 'Rua das Tulipas', <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;numero: 302 <br>
+            }</em> <br>
+
+            <em>const pessoa = { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;nome: 'João', <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;sobrenome: 'Fagundes' <br>
+
+            }</em> <br><br>
+
+            Mostre no console todas as propriedades e seus respectivos valores do objeto 'pessoa'. <br>
+        </p>
+        <hr>
+
+        <script>
+
+            const endereco = {
+                logradouro: 'Rua das Tulipas',
+                numero: 302
+            }
+
+            const pessoa = {
+                nome: 'João',
+                sobrenome: 'Fagundes',
+                endereco
+            }
+
+            console.log(pessoa);
+
+            document.write(`O senhor ${pessoa.nome} ${pessoa.sobrenome}, mora na ${pessoa.endereco.logradouro}, nº${pessoa.endereco.numero}.`);
+
+            //o loop for..in serve para interagir com um objeto
+            for(let prop in pessoa){
+                console.log(prop);
+                console.log(pessoa[prop]);
+
+                //1 - 'nome' - pessoa['nome']
+                //2 - 'sobrenome' - pessoa['sobrenome']
+                //3 - 'endereco' - pessoa['endereco']
+            }
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arrays</title>
+    </head>
+    <body>
+        <h1>Arrays</h1>
+        <h2>Desafio</h2>
+
+        <p>
+            Dado um array de números, mostre a soma de todos eles. <br>
+        </p>
+
+        <script>
+
+            const numeros = [2, 31, 0, 9, 12, 75, 98, 103];
+            let soma = 0;
+
+            for(let i = 0; i < numeros.length; i++){
+                soma += numeros[i];
+            }
+
+            document.write(`Ao somar um array com os números: [<em>${numeros}</em>] temos um total de: <br>`);
+
+            document.write(`TOTAL: <strong>${soma}</strong>. <br>`);
+
+        </script>
+
+    </body>
+</html>

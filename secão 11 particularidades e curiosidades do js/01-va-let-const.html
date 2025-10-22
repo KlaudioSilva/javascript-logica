@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Particularidades e Curiosidades do JS</title>
+
+        <!--estilização em css-->
+        <style></style>
+
+    </head>
+    <body>
+
+        <h1>Var vs Let vs Const</h1>
+
+        <!--
+            Joavascript === ECMAScriot
+            ES5 < 2015
+            ES6 - ES2015
+            ES7 - ES2016
+
+            ES5 -> var
+
+            ES6 -> let const
+        -->
+
+
+        <script>
+            //let isValid = false;
+        </script>
+        <script>
+            //exemplo com o 'var'
+            var teste = 'teste';
+            document.write(teste);
+
+            var teste = 1000;
+            document.write(teste);
+
+            let isValid = true;
+            //console.log(isValid);
+
+            function myFunction(){
+                
+                const arr = [1, 2];
+
+                let i = arr.length; //variável no escopo da função
+
+                for(let i = 0; i < 5; i++){ //dentro desse loop a variavel 'i' e de escopo de bloco
+                    console.log(i);
+                }
+
+                //..........
+                console.log('i: ', i);
+            }
+
+            myFunction();
+
+        </script>
+        
+    </body>
+</html>

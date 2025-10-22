@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loops For e Do...While</title>
+    </head>
+    <body>
+        
+        <h1>Jogando dados</h1>
+        <p>
+            Vamos simular dois dados (1/6). <br>
+            Quantas vezes seria necessário jogar os dois <br>
+            dados até que os dois números saim repetidos?
+        </p>
+
+        <script>
+            //joque um dado e guarde o número
+            let dado1 = parseInt(Math.random() * 6 + 1);
+            //jogue o outro dado e guarde o número
+            let dado2 = parseInt(Math.random() * 6 + 1);
+            //crie um contador = 0
+            contador = 1;
+            //enquanto dado1 for diferente de dado2
+            //some 1 ao contador
+            //jogue novamente os dados
+            do{
+                console.log(dado1, dado2);
+                contador++;
+                dado1 = parseInt(Math.random() * 6 + 1);
+                dado2 = parseInt(Math.random() * 6 + 1);
+            } while (dado1 !== dado2);
+
+            //mostre na tela qual número se repetiu e quantas vezes os dados foram jogados.
+            console.log('Dos dados foram jogados : ' + contador + ' vezes. E o número repetido foi o ' + dado1);
+        </script>
+
+    </body>
+</html>

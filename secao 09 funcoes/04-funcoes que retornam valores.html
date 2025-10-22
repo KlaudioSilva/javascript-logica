@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções</title>
+        
+        <!--usando um pouco de css-->
+        <style>
+            output{
+                font-size: 1.2em;
+                color: darkblue;
+                font-weight: 400;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Funções</h1>
+        <h2>Vamos resolver um problema?</h2>
+
+        <p>
+            Em uma tela há um 'input' (raio) e uma tag 'output'. Há também <br>
+            4 botões, cada um com uma funcionalidade diferente, a saber:
+            <ul>
+                <li>Obter o raio via 'prompt' e mostrar a área em 'alert'</li>
+                <li>Obter o raio via 'prompt' e mostrar a área em 'output'</li>
+                <li>Obter o raio via 'input' e mostrar a área em 'alert'</li>
+                <li>Obter o raio via 'input' e mostrar a área em 'output'</li>
+            </ul>
+        </p>
+        <p>
+            Para obter o valor de Pi, use o seguine código: <em>Math.PI</em>.
+        </p>
+        <p>
+            Atenção as <strong>maiúsculas</strong>. Lembre-se que Javascript é case-sensitve.
+        </p>
+        
+        <hr>
+        
+        <h2>Área de uma circunferência</h2>
+        
+        <label>
+            Raio:
+            <input type="number" id="raio">
+        </label> <br><br>
+
+        <button onclick="btnCalcPromptAlert()">Calcular a área do prompt e mostrar no alert</button><br>
+        <button onclick="btnCalcInputAlert()">Calcular a área do input e mostrar no alert</button> <br>
+        <button onclick="btnCalcPromptOutput()">Calcular a área do prompt e mostrar no output</button><br>
+        <button onclick="btnCalcInputOutput()">Calcular a área do input e mostrar no output</button> <br><br>
+
+        <output id="output"></output>
+        
+
+        <script>
+            
+            const raio = document.getElementById("raio");
+            const output= document.getElementById("output");
+
+            function btnCalcPromptAlert(){
+                let raio = parseFloat(prompt('Digite o valor do raio:'));
+                let mensagem = mostrarRaio(raio);
+                alert(mensagem);
+            }
+
+            function btnCalcInputAlert(){
+                let raioInput = parseFloat(raio.value);
+                let mensagem = mostrarRaio(raioInput);
+                alert(mensagem);
+            }
+
+            function btnCalcPromptOutput(){
+                let raio = parseFloat(prompt('Digite o valor do raio:'));
+                let mensagem = mostrarRaio(raio);
+                output.innerHTML = mensagem;
+            }
+
+            function btnCalcInputOutput(){
+                let raioInput = parseFloat(raio.value);
+                let mensagem = mostrarRaio(raioInput);
+                output.innerHTML = mensagem;
+            }
+            
+            function mostrarRaio(raio){
+                const pi = Math.PI;
+                let area = (pi * raio ** 2);
+
+                return `A área da circunferência de raio ${raio} é igual a ${area.toFixed(2)}.`;
+            }
+
+        </script>
+
+    </body>
+</html>

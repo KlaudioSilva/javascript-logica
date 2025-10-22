@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 026</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button{
+                width: 100px;
+                height: 40px;
+                font-size: 1.5em;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 026 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Faça um programa que leia uma frase pelo teclado e mostre: <br>
+               * quantas vezes aparece a letra 'a';             <br>
+               * em que posição ela aparece a primeira vez;     <br>
+               * em que posição ela aparece a última vez;       <br>
+        </p>
+
+        <hr>
+
+        <script>
+
+            let frase = prompt('Digite uma frase qualquer: ');
+            let letra = 'a';
+            let count = frase.split("").filter(c => c === letra).length;
+
+            //contando quantas vezes a letra "a" vai aparecer
+            document.write(`Frase digitada: "<em>${frase}</em>"` + '<br>')
+            document.write(`A letra "a" aparece ` + count + ' vezes na frase digitada pelo usuário. <br>' )
+
+            //pegando a posição em que a letra "a" aparece pela primeira vez
+            let primeiraVez = frase.indexOf("a");
+            document.write(`Essa letra aparece pela primeira vez na posição: ${primeiraVez}. <br>`);
+
+            //pegando a posição em que a letra "a" aparece pela última vez
+            let ultimaVez = frase.lastIndexOf("a");
+            document.write(`A letra "a" aparece pela última vez na posição: ${ultimaVez}. <br>`)
+        </script>
+
+    </body>
+</html>

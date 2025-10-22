@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 007</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 007 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Escreva um programa que leia um valor em metros <br>
+            e exiba convertido em centímetros e milímetros:
+        </p>
+        <hr>
+
+        <script>
+            let num = parseInt(prompt('Digite um número em metros para ser convertido:'));
+            let cent = num*100;
+            let mili = num*1000;
+
+            document.write('De: ' +num+ 'm para: ' +cent+ 'cm <br>');
+            document.write('De: ' +num+ 'm para: ' +mili+ 'mm <br>')
+            
+        </script>
+
+    </body>
+</html>

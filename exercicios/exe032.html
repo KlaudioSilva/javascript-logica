@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 032</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button{
+                width: 100px;
+                height: 40px;
+                font-size: 1.5em;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 032- Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Faça um programa que leia três números e mostre qual é o maior e qual é o menor. <br>
+        </p>
+
+        <hr>
+
+        <script>
+
+            let maior = 0
+            let menor = 0
+
+            for(let i = 1; i <= 3; i++){
+                let num = (parseInt(prompt(`Digite o ${i}º número: `)));
+                if(i == 1){
+                    maior = num;
+                    menor = num;
+                }
+
+                if(num > maior){
+                    maior = num;
+                }
+                if(num < menor){
+                    menor = num;
+                }
+            }
+
+            document.write(`O maior número digitado foi: <strong>${maior}</strong>. <br>`);
+            document.write(`O menor número digitado foi: <strong>${menor}</strong>. <br>`);
+
+        </script>
+
+    </body>
+</html>

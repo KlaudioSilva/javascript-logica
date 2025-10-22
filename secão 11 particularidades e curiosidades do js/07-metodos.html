@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Particularidades e Curiosidades do JS</title>
+
+        <!--estilização em css-->
+        <style></style>
+
+    </head>
+    <body>
+
+        <h1>O que são Métodos de objetos?</h1>
+
+        <p>
+            Métodos são funções, mas são funções que estão atreladas à objetos.<br>
+        </p>
+        <hr>
+
+
+        <script>
+            
+            const produto = {
+                nome: 'caneta',
+                quantidade: 10
+            }
+            console.log(produto);
+
+            //comprar 3 canetas
+            produto.quantidade -= 3;
+            console.log(produto);
+
+            //comprar 14 canetas
+            produto.quantidade -= 14;  //obviamente aqui acontece um erro, não se pode comprar
+            console.log(produto);      //mais canetas do que a quantidade que existe.
+
+
+            //melhorando o método
+            const caneta = {
+                nome: 'caneta',
+                quantidade: 10,
+                comprar: function(qtd){                 //o atributo 'comprar' recebe uma função
+                    if(qtd > this.quantidade){
+                        console.log('Quantidade insuficiente, total do estoque é de ', this.quantidade);
+                    }else{
+                        console.log(`comprar caneta`);
+                        this.quantidade -= qtd;
+                    }
+                }
+            }
+            caneta.comprar(5);
+
+        </script>
+        
+    </body>
+</html>

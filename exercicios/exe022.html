@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 022</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button{
+                width: 100px;
+                height: 40px;
+                font-size: 1.5em;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 022 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Crie um programa que leia o nome completo de uma pessoa e mostre: <br>
+            -- o nome com todas as letras minúsculas <br>
+            -- o nome com todas as letras maiúsculas <br>
+            -- quantas letras ao todo sem considerar espaços <br>
+            -- quantas letras tem o primeiro nome. <br>
+        </p>
+
+        <hr>
+
+        <script>
+
+            const nome = prompt('Digite o seu nome completo:');
+
+            document.write('O nome do usuário é: ' + nome + '<br>');
+            document.write('----------------------------------------------------------------------<br><br>');
+
+            document.write('Em minúsculas: ' + nome.toLowerCase() + '<br>');
+            document.write('Em maiúsculas: ' + nome.toUpperCase() + '<br>');
+
+            const noSpaces = nome.replaceAll(" ", "");
+            //console.log(noSpaces);
+            let total = noSpaces.length;
+            document.write('O total de letras (sem os espaços) é: ' + total + '<br>');
+            //console.log(total);
+
+            const firstName = nome.split(" ");
+            let primeiro = firstName[0].length;
+            document.write('O primeiro nome tem ' + primeiro + ' letras. <br>');
+
+
+            //o código mais aprimorado:
+            /*
+            const nome = prompt('Digite o seu nome completo:');
+
+            if (nome && nome.trim() !== "") {
+                const nomes = nome.trim().split(" ");
+                const primeiroNome = nomes[0];
+                const semEspacos = nome.replaceAll(" ", "");
+                
+                const resultado = `
+                    <p>O nome do usuário é: ${nome}</p>
+                    <hr>
+                    <p>Em minúsculas: <strong>${nome.toLowerCase()}</strong></p>
+                    <p>Em maiúsculas: <strong>${nome.toUpperCase()}</strong></p>
+                    <p>O total de letras (sem os espaços) é: ${semEspacos.length}</p>
+                    <p>O primeiro nome tem ${primeiroNome.length} letras.</p>
+                `;
+
+                document.body.innerHTML = resultado;
+            } else {
+                document.body.innerHTML = "<p>Entrada inválida. Por favor, recarregue a página e digite seu nome corretamente.</p>";
+            }
+            */
+            
+        </script>
+
+    </body>
+</html>

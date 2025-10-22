@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Particularidades e Curiosidades do JS</title>
+
+        <!--estilização em css-->
+        <style></style>
+
+    </head>
+    <body>
+
+        <h1>Truthy ou Falsy</h1>
+
+        <p>
+            Em Javascript, valores como 0, '', NaN, undefined, null ou false <br> 
+            são avaliados como 'false' quando convertidos para boolean. <br>
+            Todo o resto é avaliado como true. <br>
+        </p>
+        <hr>
+
+
+        <script>
+            
+            let n = 0;
+            if(n){
+                console.log('bloco verdade');
+            } else{
+                console.log('bloco mentira');
+            }
+
+        </script>
+        
+    </body>
+</html>

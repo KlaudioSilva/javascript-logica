@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Operadores lógicos</title>
+    </head>
+    <body>
+
+        <h1>Vamos resolver um problema?</h1>
+        <p>
+            Pedir para o usuário digitar dois números entre 0 e 10 e mostrar na tela <br>
+            um boolean indicando se a média é menor ou igual 4. Porém, caso um único <br>
+            número seja 0, deve mostrar 'true'.
+        </p>
+
+        <script>
+            //recebendo os números
+            let n1 = parseFloat(prompt("digite um número entre 0 e 10"));
+            let n2 = parseFloat(prompt("digite outro número entre 0 e 10"));
+            //calculando a media
+            let media = (n1 + n2) / 2;
+            //exibindo a resposta do desafio
+            alert('O aluno foi reprovado? ' + (media <= 4) || (n1==0) || (n2==0));
+        </script>
+        
+    </body>
+</html>

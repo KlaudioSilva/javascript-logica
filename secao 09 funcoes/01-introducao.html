@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções</title>
+        
+        <!--usando um pouco de css-->
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        <h1>Funções</h1>
+        <h2>Vamos resolver um problema?</h2>
+
+        <p>
+            Em uma tela contendo um input e um botão, permitir que o usuário <br>
+            digite um número e, ao cliclar no botão, mostrar a tabuada desse número <br>
+            na tela (1 à 50);
+        </p>
+        
+        <hr>
+        
+        <h2>Tabuada</h2>
+
+        <input type="number" id="number">
+        <button onclick="mostraTabuada()">Mostrar Tabuada</button>
+        <button onclick="limparTabuada()">Limpar Tabuada</button> <br><br>
+        <div id="output">
+
+        </div>
+
+        <script>
+            
+            const input = document.getElementById('number');
+            const output = document.getElementById('output');
+
+            let tabuadaHTML = '';
+
+            function mostraTabuada(){
+                const inputValue = parseFloat(input.value);
+                alert('Cliquei no botão e o número digitado foi: ' + inputValue);
+
+                limparTabuada();
+
+                for(let i = 1; i <= 50; i++){
+                    tabuadaHTML += `${i} x ${inputValue} = ${i * inputValue}<br>`;
+                }
+
+                output.innerHTML = tabuadaHTML;
+            }
+
+            function limparTabuada(){
+                tabuadaHTML = "";
+                output.innerHTML = "";
+            }
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Desafio - Pulando anos de 4 em 4</title>
+    </head>
+    <body>
+        
+        <h1>Desafio</h1>
+        <p>
+            Mostre na tela todos os anos a partir de 1004 até o ano de 2024, <br>
+            pulando de quatro em quatro anos. <br>
+            Por exemplo: <br>
+            <em>1004</em><br>
+            <em>1008</em><br>
+            <em>1012</em><br>
+            E assim por diante. <br>
+            É como mostrar os anos bissextos, mas sem as regras para descobrir <br>
+            se um ano é bissexto ou não. (Vamos imaginar que se o ano é múltiplo de <br>
+            quatro, ele é bissexto.)
+        </p>
+        <hr>
+
+        <script>
+
+            for(let i = 1004; i <= 2024; i+=4){
+                document.write('<em>'+ i +'</em>' + '<br>');
+            }
+
+            document.write('<br>-=-=-=- Fim da Contagem -=-=-=-')
+
+        </script>
+
+    </body>
+</html>

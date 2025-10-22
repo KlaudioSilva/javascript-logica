@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Desafio - Anos bissextos</title>
+    </head>
+    <body>
+        
+        <h2>Desafio</h2>
+        <p>
+            Mostre na tela todos os anos bissextos segundo a regra do mundo real <br>
+            (pesquisar como saber se um ano é bissexto ou não). Utilize os controladores <br> 
+            de fluxos 'break' e/ou 'continue' caso queira (opcional).
+        </p>
+        <hr>
+
+        <script>
+
+            for(let i = 1004; i <= 2025; i++){
+                if(i % 4 == 0 && i % 100 != 0 || i % 400 == 0){
+                    document.write(i + '<br>');
+                }
+            }
+
+        </script>
+
+    </body>
+</html>

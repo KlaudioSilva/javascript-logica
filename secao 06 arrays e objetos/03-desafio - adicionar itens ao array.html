@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arrays</title>
+    </head>
+    <body>
+        <h1>Arrays - Adicionando valores no final do Array</h1>
+        <h2>Vamos resolver um problema?</h2>
+
+        <p>
+            Na lista de nomes do exercício, adicione mais um nome a partir <br>
+            de um 'prompt()' antes de mostrar os nomes e a quantidade na tela. <br>
+        </p>
+
+        <script>
+
+            //const nomes = ['Klaudio', 'Elma', 'João Pedro', 'Arthur'];        //sintaxe literal
+            const nomes = new Array('Klaudio', 'Elma', 'João Pedro', 'Arthur'); //função construtora
+
+            let nome = prompt('Digite um nome: ');      //pedindo novo nome
+            nomes[nomes.length] = nome;                 //adicioando no fim do array
+
+            document.write('<br>----------------------------------<br>');
+            
+            //se você NÃO sabe o tamanho exato do array:
+            for(let i = 0; i < nomes.length; i++){
+                document.write(`nome: ${nomes[i]}<br>`);
+            }
+
+            document.write('<br>----------------------------------<br>');
+
+            document.write(`Total de nomes no array: ${nomes.length}. <br>`);
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções</title>
+        
+        <!--usando um pouco de css-->
+        <style>
+            output{
+                font-size: 1.2em;
+                color: darkblue;
+                font-weight: 400;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Funções</h1>
+        <h2>Vamos resolver um problema?</h2>
+
+        <p>
+            Em uma tela há um 'input' (raio) e uma tag 'output'. Há também <br>
+            2 botões, cada um com uma funcionalidade diferente, a saber:
+            <ul>
+                <li>Obter o raio via 'prompt' e mostrar a área em 'output'</li>
+                <li>Obter o raio via 'input' e mostrar a área em 'output'</li>
+            </ul>
+        </p>
+        <p>
+            Para obter o valor de Pi, use o seguine código: <em>Math.PI</em>.
+        </p>
+        <p>
+            Atenção as <strong>maiúsculas</strong>. Lembre-se que Javascript é case-sensitve.
+        </p>
+        
+        <hr>
+        
+        <h2>Área de uma circunferência</h2>
+        
+        <label>
+            Raio:
+            <input type="number" id="raio">
+        </label>
+
+        <button onclick="btnCalcPrompt()">Calcular a área do prompt</button>
+        <button onclick="btnCalcInput()">Calcular a área do input</button> <br>
+
+        <output id="output"></output>
+        
+
+        <script>
+            
+            const raio = document.getElementById("raio");
+            const output= document.getElementById("output");
+
+            function btnCalcPrompt(){
+                let raioValue = parseFloat(prompt("Digite o raio:"));
+                mostrarRaio(raioValue);
+            }
+            function btnCalcInput(){
+                let raioValue = parseFloat(raio.value);
+                mostrarRaio(raioValue); //
+                
+            }
+
+            function mostrarRaio(raio){
+                const pi = Math.PI;
+                let area = (pi * raio ** 2);
+                console.log(area);
+
+                output.innerHTML = `A área da circunferência de raio ${raio} é igual a ${area.toFixed(2)}.`;
+            }
+
+        </script>
+
+    </body>
+</html>

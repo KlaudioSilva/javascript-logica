@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dados do aluno</title>
+        
+        <!--usando um pouco de css-->
+        <style>
+            p em{
+                color: blue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Objetos com Arrays</h1>
+        <h2>Vamos resolver um problema?</h2>
+
+        <p>
+            Dado o seguinte objeto: <br><br>
+            <em>
+                const aluno = { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;nome: 'nome 1', <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;notas: [1, 3, 3, 8] <br>
+                }
+            </em> <br><br>
+
+            Mostre na tela as seguintes informações:
+            <ul>
+                <li>Nome</li>
+                <li>Lista com as notas</li>
+                <li>Média</li>
+                <li>Aprovado/reprovado</li>
+            </ul>
+        </p> <br>
+        
+        <hr>
+        
+        <h2>Informaçõs de um aluno</h2>
+
+        <div id="output">
+
+        </div>
+
+
+        <script>
+            
+            const aluno = {
+                nome: 'Klaudio Kha',
+                notas: [1, 4, 3, 8]
+            }
+
+            const output = document.getElementById('output');
+
+            output.innerHTML = '<h4>Aluno: ' + aluno.nome + '</h4>';
+            output.innerHTML += '<p>Notas: </p>';
+            output.innerHTML += '<ul>'
+                
+            let soma = 0;
+
+            for(let i = 0; i < aluno.notas.length; i++){
+                soma += aluno.notas[i];
+                output.innerHTML += '<li>' + aluno.notas[i] + '</li>';
+            }
+
+            let media = (soma / aluno.notas.length);
+
+            output.innerHTML += '</ul>';
+            output.innerHTML += `<p>Média: ${media}</p>`;
+
+            /*
+            let aprovado = null;
+
+            if(media >= 7){
+                aprovado = 'Sim';
+            } else {
+                aprovado = 'Não';
+            }
+            */
+
+            //fazendo o if usando operadores ternários:
+            let aprovado = (media >= 7) ? "Sim" : "Não"    //não usar operador ternário quando o if/else tiver mais do que uma linha
+
+            output.innerHTML += `Aprovado? ${aprovado}`;
+
+        </script>
+
+    </body>
+</html>

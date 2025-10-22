@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções</title>
+        
+        <!--usando um pouco de css-->
+        <style>
+            output{
+                font-size: 1.2em;
+                color: darkblue;
+                font-weight: 400;
+            }
+            b{
+                color: red;
+                font-weight: 600;
+                font-size: 1.1em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Funções</h1>
+        <h2>Desafio</h2>
+
+        <p>
+            Crie uma função chamada <em>calcular()</em> que receba dois números e uma string <br>
+            com um dos seguintes valores: <b>+</b>, <b>-</b>, <b>*</b> ou <b>/</b>.
+        </p>
+        <p>
+            Retorne a soma, subtração, multiplicação ou divisão <br>
+            dependendo do símbolo passado por parâmetro.
+        </p>
+        <hr>
+        
+        <h2>Somando, Subtraindo, Multiplicando ou Dividindo</h2>
+        
+        <label>
+            Primeiro número:
+            <input type="number" id="num1">
+        </label> <br><br>
+        <label>
+            Segundo número:
+            <input type="number" id="num2">
+        </label> <br><br>
+        <label>
+            Digite o operador (+, -, * ou /):
+            <input type="text" id="simbolo">
+        </label> <br><br>
+
+        <button onclick="calcular()">Calcular</button> <br><br>
+
+        <output id="output"></output>
+        
+
+        <script>
+            
+            const num1 = document.getElementById("num1");
+            const num2= document.getElementById("num2");
+            let simbolo = document.getElementById("simbolo");
+            let resultado = 0;
+            let n1 = 0;
+            let n2 = 0;
+            let operator = '';
+
+            function calcular(n1, n2, operator){
+                n1 = parseFloat(num1.value);
+                n2 = parseFloat(num2.value);
+                operator = simbolo.value;
+                console.log(operator)
+
+                switch(operator){
+                    case '+': 
+                        resultado = n1 + n2;
+                        console.log (n1+n2);
+                        output.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${resultado}.`;
+                        break;
+                    case '-': 
+                        resultado = n1 - n2;
+                        output.innerHTML = `A subratração de ${n1} por ${n2} é igual a ${resultado}.`;
+                        console.log (n1-n2);
+                        break;
+                    case '*': 
+                        resultado = n1 * n2;
+                        console.log (n1*n2);
+                        output.innerHTML = `A multiplicacão de ${n1} por ${n2} é igual a ${resultado}.`;
+                        break;
+                    case '/': 
+                        resultado = n1 / n2;
+                        output.innerHTML = `A divisão de ${n1} por ${n2} é igual a ${resultado}.`;
+                        console.log (n1/n2);
+                        break;
+                    default: 
+                        output.innerHTML = `ERRO! Operação <b>Nula</b>, símbolo da operação não digitado!`
+
+                }
+                
+            }
+
+            
+
+        </script>
+
+    </body>
+</html>

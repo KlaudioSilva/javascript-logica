@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loops For, While e Do...While</title>
+    </head>
+    <body>
+        
+        <h1>Vamos resolver um problema?</h1>
+        <p>
+            Pedir ao usuário para digitar um número qualquer e mostrar <br>
+            todos os números pares do 2 (inclusive) até o número que o usuário digitou.
+        </p>
+
+        <h2>PARA NÃO ESQUECER</h2>
+        <ol>
+            <li><strong>Um loop SEMPRE precisa ter uma condição de saída</strong></li>
+            <li><strong>Loop For: ideal para quando sabemos exatamente quantas vezes o loop será executado</strong></li>
+            <li><strong>Loop While: ideal para quando não sabemos quantas vezes o loop será executado. Além disso, se a condição for false, não executa nenhuma vez</strong></li>
+            <li><strong>Loop Do..While: se parece com o loop While, mas o código é executado ao menos uma vez, mesmo que a condição seja inicialmente false.</strong></li>
+        </ol>
+
+        <script>
+            
+            let num = parseInt(prompt('Digite um número inteiro qualquer:'));
+            let i = 2;
+
+            do{
+                console.log(i);
+                document.writeln("<strong>"+ i +"</strong> <br>");
+                i += 2;
+            } while(i <= num);
+
+        </script>
+
+    </body>
+</html>

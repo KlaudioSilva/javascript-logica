@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tratamento de Excecões</title>
+
+        <!--estilizando a página-->
+        <style>
+            em{
+                color: blue;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <h1>Vamos resolver um problema?</h1>
+        <ol>
+            <li>Criar um arquivo javascript com duas funções:
+                <ul>
+                    <li>calcularAreaRetangulo</li>
+                    <li>calcularAreaTriangulo</li>
+                </ul>
+            </li>
+            <li>Lançar uma exceção caso os parâmetros estejam incorretos</li>
+            <li>Interceptar o erro na execução das funções</li>
+        </ol>
+        <br>
+        <hr>
+
+        <h2>Try.. catch(error)</h2>
+        <div id="output"></div>
+
+
+        <script src="02-area.js"></script>
+        <script>
+
+            try{
+                console.log(calcularAreaRetangulo(2, 5));
+            }catch(erro){
+                alert('ERRO! Atenção: ' + erro.message);
+            }
+            alert('Fim do programa!');
+
+            try{
+                let areaTriangulo = calcularAreaTriangulo(3, 9);
+                document.getElementById('output').innerHTML = `A área do triângulo é ${areaTriangulo} <br>`
+            }catch(erro){
+                alert('ERRO! Atenção: ' + erro.message);
+            }
+
+        </script>
+
+    </body>
+</html>

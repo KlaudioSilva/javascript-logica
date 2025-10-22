@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 027</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button{
+                width: 100px;
+                height: 40px;
+                font-size: 1.5em;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 027 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Faça um programa que leia o nome completo de uma pessoa, mostrando em seguinda <br>
+            o primeiro e o último nome separadamente. <br>
+        </p>
+
+        <hr>
+
+        <script>
+
+            const nome = prompt('Digite seu nome completo: ');
+
+            //crie um array e separe as palavras
+            const picote = nome.split(' ');         //separa as palavras pelos espaços entre elas
+            console.log(picote);
+            console.log(picote[0]);
+            console.log(picote[2]);
+            console.log(picote.length-1);
+
+            //exiba a frase completa
+            document.write(`O seu nome completo é: <strong>${nome}</strong>. <br>`);
+
+            //mostre o primeiro nome
+            document.write(`Seu primeiro nome é <strong>${picote[0]}</strong>. <br>`);
+
+            //mostre o último nome
+            document.write(`Seu último nome é <strong>${picote[picote.length-1]}</strong>. <br>`);
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loops For e Do...While</title>
+    </head>
+    <body>
+        
+        <h1>Usando o loop For em nossa tabuada</h1>
+
+        <script>
+            let num = parseInt(prompt('Digite um número para nossa tabuada:'));
+
+            if(!isNaN(num)){
+                for(let i = 0; i <= 50; i++){
+                    document.write(num + ' x ' + i + ' : ' + num * i + '<br>')
+                }
+                document.write("Fim da tabuada com o loop For");
+            } else {
+                alert('Digite apenas números!');
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 028</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button{
+                width: 100px;
+                height: 40px;
+                font-size: 1.5em;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 028 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Crie um programa que escolha um número de 0 a 5 e faça o usuário <br>
+            tentar descobrir qual foi o escolhido pelo programa. <br>
+            Na tela deverá aparecer se o usuário venceu ou perdeu. <br>
+        </p>
+
+        <hr>
+
+        <script>
+
+            let num = parseInt(Math.random() * 5 + 1);  //o sistema sorteou um valor de 0 até 5
+
+            let chute = parseInt(prompt('Digite um valor para tentar acertar:'));  //chute do usuário
+
+            if(chute === num){ //se o usuário acertar o chute
+                document.write(`ACERTOU! O seu chute no número ${chute}, está correto! <br>`);
+            } else {           //se o usário errar o chute
+                document.write(`ERROU! Sinto muito mas você chutou ${chute}, que não é o valor sorteado! <br>`);
+            }
+
+            //exibindo o valor sorteado pelo computdor
+            document.write(`Valor sorteado pelo computador: <strong>${num}</strong>. <br>`)
+
+        </script>
+
+    </body>
+</html>

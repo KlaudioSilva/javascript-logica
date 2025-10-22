@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Switch case</title>
+    </head>
+    <body>
+        
+        <h1>Vamos resolver um problema?</h1>
+        <p>
+            Pedir ao usuário para digitar um número entre 0 e 6. Mostrar uma mensagem <br>
+            informando qual é o dia da semana correspondente. Domingo (0) até Sábado (6). <br>
+            Exemplo: se o usuário digitar 3, deve exibir um alert "Quarta-feira". <br><br>
+
+            Obs: não precisa converter para número.
+        </p>
+
+        <script>
+
+            //digite um numero entre 0 e 6
+            let num = prompt('Digite um número entre 0 e 6: ');
+
+            switch(num){
+                case "0":
+                    alert('Domingo');
+                    break;
+                case "1":
+                    alert('Segunda-feira');
+                    break;
+                case "2":
+                    alert('Terça-feira');
+                    break;
+                case "3":
+                    alert('Quarta-feira');
+                    break;
+                case "4":
+                    alert('Quinta-feira');
+                    break;
+                case "5":
+                    alert('Sexta-feira');
+                    break;
+                case "6":
+                    alert('Sábado');
+                    break;
+                default:
+                    alert('Digite um número entre 0 e 6!');
+            }
+
+            
+        </script>
+
+    </body>
+</html>

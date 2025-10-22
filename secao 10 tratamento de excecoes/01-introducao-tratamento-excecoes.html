@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tratamento de Excecões</title>
+
+        <!--estilizando a página-->
+        <style>
+            em{
+                color: blue;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <h2>Try Catch</h2>
+        <p>
+            É uma estrutura de controle que permite lidar com erros ou exceções em um programa.
+        </p>
+        <p>
+            <b>Exemplo:</b><br>
+            <em>
+                try{ <br>
+                    &emsp;&emsp;funcaoQuePodemosGerarErro() <br>
+                    &emsp;&emsp;//código com possibilidades <br>
+                    &emsp;&emsp;//de gerar erro <br>
+                }catch(error){ <br>
+                    &emsp;&emsp;console.error(error); <br>
+                    &emsp;&emsp;//lidar com o erro sem <br>
+                    &emsp;&emsp;//comprometer o restante <br>
+                    &emsp;&emsp;//do programa <br>
+                }
+            </em>
+        </p>
+        <br>
+        <hr>
+        
+        <h2>Quando usar o Try Catch?</h2>
+        <p>
+            Deve ser usado sempre que houver a possibilidade de ocorrer um erro no programa. Por exemplo:
+            <ul>
+                <li>estiver tentando ler um arquivo que não existe</li>
+                <li>tentar se conectar à um servidor mas este não responder adequadamente</li>
+            </ul>
+        </p><br>
+        <hr>
+
+        <h1>Vamos resolver um problema?</h1>
+        <ol>
+            <li>Criar um arquivo javascript com duas funções:
+                <ul>
+                    <li>calcularAreaRetangulo</li>
+                    <li>calcularAreaTriangulo</li>
+                </ul>
+            </li>
+            <li>Lançar uma exceção caso os parâmetros estejam incorretos</li>
+            <li>Interceptar o erro na execução das funções</li>
+        </ol>
+        <br>
+        <hr>
+
+        <h2>Try.. catch(error)</h2>
+        <div id="output"></div>
+
+
+        <script>
+
+            let obj = {name: 'Klaudio', profession: 'Web Developer', email: 'klaudio.dev@server.com'};
+            //obj = null  //forçando um erro
+
+            try{        //se tudo estiver bem execute este bloco:
+                document.getElementById('output').innerHTML = `Name: ${obj.name} - Profession: ${obj.profession} - Email: ${obj.email}.`;       //sem erro
+                //document.getElementById('resultado').innerHTML = `Name: ${obj.name} - Profession: ${obj.profession} - Email: ${obj.email}.`;  //com erro
+            }catch(e){  //se ocorrer um erro execute este bloco
+                console.log(e.message);
+            }finally{   //independente de se houver ou não um erro execute este bloco
+                alert('Fim da execução do programa.')
+            }
+
+        </script>
+
+    </body>
+</html>

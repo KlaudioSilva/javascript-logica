@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arrays</title>
+    </head>
+    <body>
+        <h1>Arrays</h1>
+
+        <script>
+
+            //const nomes = ['Klaudio', 'Elma', 'João Pedro', 'Arthur'];       //sintaxe literal
+            const nomes = new Array('Klaudio', 'Elma', 'João Pedro', 'Arthur'); //função construtora
+
+            //console.log(nomes);
+
+            //se você sabe o tamanho exato do array:
+            for(let i = 0; i < 4; i++){
+                document.write(`nome: ${nomes[i]}<br>`);
+            }
+
+            document.write('<br>----------------------------------<br>');
+
+            //se você NÃO sabe o tamanho exato do array:
+            for(let i = 0; i < nomes.length; i++){
+                document.write(`nome: ${nomes[i]}<br>`);
+            }
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Particularidades e Curiosidades do JS</title>
+
+        <!--estilização em css-->
+        <style></style>
+
+    </head>
+    <body>
+
+        <h1>Functions</h1>
+
+        
+        <hr>
+
+
+        <script>
+            
+            //functions declarations
+            function ola1(nome){
+                console.log('Ola de function declaration, ' + nome);
+            }
+            ola1('Klaudio');
+            
+            //functions expressions
+            const ola2 = function (nome){       //criamos uma variável e armazenamos uma funçao sem nome 
+                console.log('Olá de function expression, ' + nome);
+            }
+            ola2('Kha');
+
+            //function anônima sendo executada dentro de um array
+            const arr = [ola1, ola2, function (){console.log('function anonima dentro de array executada!')}];
+            arr[2]();
+
+            //-----------------------------------------------------------------------------------------------------
+
+            //Arrow Function
+            const ola3 = (nome) => {
+                console.log('Olá de arrow function, ' + nome);
+            }
+            ola3('eu sou uma arrow function!');
+
+            //quando a função tem só 1 linha, podemos encurtar a arrow function omitindo as {} e o return:
+            const soma = (n1, n2) => n1 + n2 
+            console.log(soma(7, 2));
+            
+            //se a função tiver só 1 parâmetro podemos omitir os ():
+            const multipiPorDois = n => n * 2
+            console.log(multipiPorDois(8));
+
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM - Document Object Model</title>
+        
+    </head>
+    <body>
+        <h1 id="titulo">Introdução ao DOM</h1>
+        <h2>Adicionar mais conteúdo sem substituir o original</h2>
+
+        <p>
+            Vamos criar uma lista bem simples e depois, usando o dom, <br>
+            adicionaremos mais conteúdo à essa lista, sem substituir o conteúdo antigo. <br>
+        </p>
+
+        <h3>Lista de tarefas</h3>
+        <ol id="listaTarefas">
+            <li>Aprender CSS</li>
+            <li>Aprender JavaScript</li>
+            <li>Aprender a usar o DOM</li>
+            <li>Criar coisas legais</li>
+        </ol>
+        
+        <hr>
+
+        <script>
+            
+            const lista = document.getElementById('listaTarefas');
+            let novaTarefa = 'Aplicar à vagas de emprego';
+
+            console.log(lista.innerHTML);
+            //usando o templateStrings para formatar
+            lista.innerHTML = lista.innerHTML + `<li>${novaTarefa}</li>`;
+
+            //outras formas de fazer a mesma coisa
+            lista.innerHTML = lista.innerHTML + '<li>Buscar vagas</li>';
+            lista.innerHTML += '<li>Iniciar a procura por emprego</li>';
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Objetos</title>
+    </head>
+    <body>
+        <h1>Objetos</h1>
+        <h2>Vamos resolver um problema?</h2>
+
+        <p>
+            Dados os seguintes objetos: <br>
+            <em>const pessoa = { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;nome: 'João', <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;sobrenome: 'Fagundes' <br>
+
+            }</em> <br>
+
+            <em>const endereco = { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;logradouro: 'Rua das Tulipas', <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;numero: 302 <br>
+            }</em> <br> <br>
+
+            Adicione uma propriedade chamada endereço em pessoa que 'aponte' para o objeto endereco. <br>
+        </p>
+        <hr>
+
+        <script>
+
+            const endereco = {
+                logradouro: 'Rua das Tulipas',
+                numero: 302
+            }
+
+            const pessoa = {
+                nome: 'João',
+                sobrenome: 'Fagundes',
+                endereco
+            }
+
+            console.log(pessoa);
+
+            document.write(`O senhor ${pessoa.nome} ${pessoa.sobrenome}, mora na ${pessoa.endereco.logradouro}, nº${pessoa.endereco.numero}.`);
+
+        </script>
+
+    </body>
+</html>

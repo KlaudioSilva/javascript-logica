@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Particularidades e Curiosidades do JS</title>
+
+        <!--estilização em css-->
+        <style></style>
+
+    </head>
+    <body>
+
+        <h1>Tipos Primitivos</h1>
+
+        <p>
+            Em Javascript, há dois tipos de dados possíveis: primitivos e objetos: <br>
+            <ul>
+                <li>String</li>
+                <li>Number</li>
+                <li>Boolean</li>
+                <li>null</li>
+                <li>undefined</li>
+                <li>Symbol (ES2015)</li>
+            </ul>
+        </p>
+        <hr>
+
+
+        <script>
+            
+            let num = 10;
+
+            function teste(num){
+                console.log('num é o valor interno da função teste: ', ++num);
+            }
+
+            teste(num);  //aqui estou passando somente o valor que está na variável 'num'
+
+            console.log('Aqui num é o valor da variável externa ', num);
+
+            console.log('----------------------------------------------------------------');
+
+            const arr = [1, 2, 3];
+            const arr2 = [4, 5, 6];
+
+            function adicionaNaArray(valor, arr){
+                arr[arr.length] = valor;
+            }
+
+            function limpaArray(arr){
+                arr.length = 0;
+            }
+
+           // adicionaNaArray('novo valor', [1, 2, 3]);  //na verdade não é o valor da array que está sendo passado
+            //adicionaNaArray('novo valor', ax123);      //mas sim, uma referência ao seu endereço na memória (ex: ax123)
+            console.log(arr);
+
+            limpaArray(arr);
+            adicionaNaArray('novo valor', arr);
+
+            console.log(arr);
+            
+            const obj = {nome: 'Klaudio'}
+            
+            function adicionaPropEmObj(prop, valor, obj){
+                if(obj[prop] === undefined){
+                    obj[prop] = valor;
+                }
+            }
+            
+            adicionaPropEmObj('sobrenome', 'Silva', obj);
+            console.log(obj);
+
+            </script>
+        
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 005</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 005 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Crie um algoritmo que leia um número e mostre <br>
+            o seu dobro, triplo e raiz quadrada.
+        </p>
+        <hr>
+
+        <script>
+            let num = parseInt(prompt('Digite um número inteiro qualquer:'));
+
+            let dobro = (num*2);
+            let triplo = (num*3);
+            //let raiz = (num**(1/2));  //raiz quadrada usando apenas lógica de programação
+            let raiz = Math.sqrt(num);  //raiz quadrada usando metodo do JS
+
+            document.write('O número digitado pelo usuário foi: ' + num + '<br>');
+            document.write('O seu dobro é ' +dobro+ '<br>');
+            document.write('O seu triplo é ' +triplo+ '<br>');
+            document.write('A raiz quadrada é ' +raiz+ '<br>');
+            
+        </script>
+
+    </body>
+</html>

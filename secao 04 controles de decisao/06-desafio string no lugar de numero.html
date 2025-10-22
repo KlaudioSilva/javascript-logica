@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>If Else</title>
+    </head>
+    <body>
+        
+        <h1>Vamos resolver um problema?</h1>
+        <p>
+            Foi pedido ao usuário para digitar dois números entre 0 e 10 <br>
+            mas a pessoa digitou um texto no lugar do número. Como resolver?
+        </p>
+
+        <script>
+
+            //entrando com os dados
+            let nota1 = parseFloat(prompt('Digite a primeira nota do aluno:'));
+            let nota2 = parseFloat(prompt('Digite a segunda nota do aluno:'));
+
+            if(!isNaN(nota1) && !isNaN(nota2)){
+                if(nota1 <= 10 && nota2 <= 10 && nota1 >= 0 && nota2 >= 0){
+                    //calcule a media
+                    let media = (nota1+nota2) / 2;
+
+                    //o aluno foi aprovado ou reprovado
+                    if(media > 4 && nota1 > 0 && nota2 > 0){
+                        alert('APROVADO!');
+                    }
+                    if(media <= 4 || nota1 == 0 || nota2 == 0){
+                        alert('REPROVADO!');
+                    }
+                } else {
+                    alert('ERRO! Os números devem estar entre 0 e 10!');
+                }
+            } else {
+                alert('ERRO! Devem ser digitados somente valores numéricos!')
+            }
+        </script>
+
+    </body>
+</html>

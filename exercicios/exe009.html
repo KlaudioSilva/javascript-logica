@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 009</title>
+
+        <style>
+            h2{
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: red;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            Exercício 009 - Lógica de programação com Javascript
+        </h2>
+
+        <p>
+            Crie um programa que leia quanto dinheiro você tem na carteira <br>
+            e mostre quantos dólares você pode comprar: <br>
+            Obs: use a cotação de U$1,00 = R$5,41
+        </p>
+        <hr>
+
+        <script>
+            let money = parseFloat(prompt('Quanto dinheiro em R$ você tem na sua carteira?'));
+            let dolar = (money/5.41);
+
+            document.write('Com R$' +money+ ' você pode comprar U$' +(dolar.toFixed(2))+ '<br>');  //usando método 'to.Fixed' para arredondar o valor
+            
+        </script>
+
+    </body>
+</html>
