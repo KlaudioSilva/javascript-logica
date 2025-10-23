@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Intro Orientação à Objetos</title>
+
+        <!--estilização em css-->
+        <style>
+
+            
+
+        </style>
+
+    </head>
+
+    <body>
+        
+        <h1>Modificadores de acesso propriedades e métodos privados</h1>
+
+        <h3>Vamos resolver um problema?</h3>
+
+        <p>
+             Criar uma classe Produto que inicie sem itens em estoque.
+        </p>
+        <p>
+            A classe deve ter métodos públicos para remover itens do estoque (comprar(quantidade)) e <br>
+            para adicionar itens no estoque (adicionarAoEstoque(quantidade)). Além disso, implementar <br>
+            um método privado <b>#removerDoEstoque(quantidade)</b> que será usado internamente para atualizar <br>
+            a quantidade do estoque sempre que <i>comprar()</i> for efetuado com sucesso. O acesso à quantidade <br>
+            em estoque deve ser restrito.
+        </p>
+        
+        <hr>
+        <br>
+
+        <script>
+
+            class Produto{
+                #estoque;
+                constructor(nome){
+                    this.#estoque = 0;
+                    this.nome = nome;
+                }
+
+                comprar(quantidade){
+                    if(quantidade < this.#estoque){
+                        this.#removerDoEstoque(quantidade);
+                        console.log(`O estoque de ${this.nome}, foi atualizado.`);
+                    }else{
+                        console.log('Quantidade do estoque insuficiente.');
+                    }
+                }
+
+                adicionarAoEstoque(quantidade){
+                    this.#estoque += quantidade;
+                }
+
+                #removerDoEstoque(quantidade){
+                    this.#estoque -= quantidade;
+                }
+            }
+
+            const caneta = new Produto('Caneta');
+            caneta.adicionarAoEstoque(40);
+            caneta.comprar(5);
+
+        </script>
+        
+    </body>
+
+</html>

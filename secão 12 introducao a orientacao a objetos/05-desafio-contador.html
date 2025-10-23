@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Intro Orientação à Objetos</title>
+
+        <!--estilização em css-->
+        <style>
+
+            
+
+        </style>
+
+    </head>
+
+    <body>
+        
+        <h1>Desafio</h1>
+
+        <p>
+             Criar uma classe <i>Contador</i> que inicialmente tenha um valor zero.
+        </p>
+        <p>
+            A classe deve ter um método <i><b>incrementar()</b></i> para aumentar o contador em um <br>
+            e um método <i><b>valorAtual()</b></i> para retornar o valor atual do contador. <br>
+            No entanto, o acesso direto ao valor do contador deve ser proibido (privado), garantindo que <br>
+            o contador só possa ser modificado através dos métodos definidos. <br>
+            Fazer o código normal antes e mostrar o problema de deixar público. Depois colocar o que <br>
+            for necessário como privado.
+        </p>
+        
+        <hr>
+        <br>
+
+        <script>
+
+            class Contador{
+                #contador   //propriedade privada
+                constructor(){
+                    this.#contador = 0;
+                }
+
+                incrementar(){
+                    this.#contador++;
+                }
+
+                valorAtual(){
+                    return this.#contador;
+                }
+            }
+
+            const contador = new Contador();
+            contador.incrementar();
+            contador.incrementar();
+            contador.incrementar();
+            contador.incrementar();
+            contador.incrementar();
+            contador.incrementar();
+            console.log(contador.valorAtual());
+
+        </script>
+        
+    </body>
+
+</html>
