@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Intro Orientação à Objetos</title>
+
+        <!--estilização em css-->
+        <style>
+
+            
+
+        </style>
+
+    </head>
+
+    <body>
+        
+        <h1>Vamos resolver um problema?</h1>
+
+        <p>
+            Criar uma classe Produto que receba na função construtora o nome e a quantidade em estoque inicial. <br>
+            Implementar dois métodos: <i>comprar()</i> e <i>adicionar()</i>. <br>
+            Fazer todas as verificações prossíveis para evitar erros.    
+        </p>
+        
+        <hr>
+        <br>
+
+        <script>
+
+            class Produto{
+                constructor(nome, qtdEstoque){
+                    console.log("construtor chamado");
+                    this.nome = nome;
+                    this.qtdEstoque = (qtdEstoque < 0) ? 0 : qtdEstoque;    //usando um operador ternário
+                }
+
+                comprar(quantidade){
+                    if(quantidade < 0){
+                        throw Error('Quantidade não pode ser negativa!');
+                    }
+                    if(quantidade > this.qtdEstoque){
+                        console.log('Estoque insuficiente para a compra!');
+                        return null
+                    }
+
+                    this.qtdEstoque -= quantidade;
+                    console.log(`Você comprou ${quantidade} unidades do produto ${this.nome}.`);
+                }
+
+                adicionar(quantidade){
+                    if(quantidade < 0){
+                        throw Error('Quantidade não pode ser negativa!');
+                    }
+                    this.qtdEstoque += quantidade;
+                    console.log(`Você adicionou ${quantidade} unidades do produto ${this.nome}.`);
+                }
+
+                verificaEstoque(){
+                    console.log(`A quantidade em estoque atual do produto ${this.nome} é de ${this.qtdEstoque} unidades.`);
+                }
+            }
+
+            //criando as instâncias da classe Produto
+            const caneta = new Produto('Caneta', 10);
+            const lapis = new Produto('Lápis', 20);
+
+        </script>
+        
+    </body>
+
+</html>

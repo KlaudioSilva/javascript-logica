@@ -6,16 +6,99 @@
         <title>Intro Orientação à Objetos</title>
 
         <!--estilização em css-->
-        <style></style>
+        <style>
+
+            h1{
+                color: red;
+            }
+
+            .blue{
+                color: blue;
+                font-family: Courier, monospace;
+            }
+
+        </style>
+
     </head>
 
     <body>
         
-        <h1></h1>
+        <h1>Overview Sobre Orientação à Objetos</h1>
         <p>
-
+            Paradigma de programação baseada na ideia de "objetos" do mundo real e suas interações.
         </p>
+        <p>
+            <b>O que é um Objeto?</b> <br>
+            Um objeto é uma unidade que pode descrever suas caracteristicas (propriedades, atributos) ou suas funções (métodos). <br>
+            Esse Objeto é coeso, pois agrupa tanto os dados quanto sua funções.
+        </p>
+        <p>
+            Um objeto nesse paradigma precisa ser coeso, ou seja, precisa agrupar sua propriedades e métodos (estes podem modificar sua propriedades).
+        </p>
+        <p>
+            No trecho de código abaixo, o que acontece se tivermos que modificar a lógica do método 'comprar'? E se tivermos 10, 20, 100 produtos diferentes?
+        </p>
+
+        <div class="blue">
+            <em>const caneta = { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;nome: 'Caneta', <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;quantidade: 10, <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;comprar: function (qtd){ <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.quantidade -= qtd <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+            }</em> <br><br>
+
+            <em>const caderno = { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;nome: 'Caderno', <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;quantidade: 7, <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;comprar: function (qtd){ <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.quantidade -= qtd <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+            }</em> <br><br>
+        </div>
+
+        <p>
+            <b>Como criamos Objetos em POO?</b> <br>
+            Em linguagens orientadas à objetos, um objeto pode ser criado à partir de um molde (projeto) que, em POO, chamamos de classe.
+        </p>
+        <p>
+            <b>O que é uma classe?</b> <br>
+            Em linguagens orientadas à objetos, uma classe é uma especificação (um molde, um projeto).
+            À partir dessas classes criamos objetos. <br>
+            NUNCA usamos classes. SEMPRE usamos objetos.
+        </p>
+        <p>
+            À partir de uma classe (projeto) criamos vários objetos iguais. <br>
+            Se modificarmos a classe, estaremos modificando também todos os objetos gerados à partir dela. Mas se modificarmos apenas um objeto nada muda na classe ou nos outros objetos.
+        </p>
+        <p>
+            Em POO dizemos que cada objeto gerado por uma classe é chamado de <b>Instância</b> daquela determinada classe.
+        </p>
+        <p>
+            Mesmo que nos é permitido trabalhar com objetos literais, podemos deixar nosso código otimizado para futuras manutenções ao utilizar classe e funções construtoras.
+        </p>
+        <p>
+            Uma função construtora é um método especial para inicializar um objeto criado à partir de uma classe.
+        </p>
+
+        <div class="blue">
+            <em>class Produto{ <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;constructor (nome, qtd){ <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.nome = nome <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.quantidade = qtd <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;comprar(qtd){ <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.quantidade = qtd <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+            } <br><br>
+                
+            const caneta = new Produto('Caneta', 10) <br>
+            const caderno = new Produto('Caderno', 16) <br>
+            </em> <br>
+        </div>
+
         <hr>
+        <br><br>
 
         <script>
 
