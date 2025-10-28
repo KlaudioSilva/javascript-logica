@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Removendo elementos no final e no início do Array</title>
+
+        <!--estilizando com css-->
+        <style></style>
+
+    </head>
+
+    <body>
+
+        <script>
+            const arr = [1, 9, 0, 6]    //lenght = 4 - último índice é 3
+            //          [0, 1, 2, 4]  →  esses são os índices
+            console.log(arr);
+
+            //remover o ultimo elemento diminuindo o lenght do array
+            arr.length = arr.length - 1 //diminuindo o comprimento do lenght em 1 elemento
+            console.log(arr);
+
+
+            //utilizando o método POP() para remover o último elemento do array
+            const arr2 = [5, 7, 9, 3]
+            console.log(arr2);
+            arr2.pop();   //o metódo POP() remove o último elemento '3'
+            console.log(arr2);
+            
+            
+            //removendo o primeiro elemento usando um loop
+            const arr3 = [2, 9, 4, 1]
+            console.log(arr3);
+            for(let i = 0; i < arr3.length; i++){
+                arr3[i] = arr3[i + 1];
+            }
+
+            //usando o método pop() para apagar o espaço vazio no final do array
+            arr3.pop();
+            //arr3.length = arr3.length - 1;
+            console.log(arr3);
+
+
+            //usando o método SHIFT() para remover o primeiro elemento
+            const arr4 = [ 6, 5, 4, 8]
+            console.log(arr4)
+
+            //removendo com o primeiro elemento com o shift()
+            arr4.shift()
+            console.log(arr4)
+
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>O que é Estrutura de Dados</title>
+
+        <!--estilizando com css-->
+        <style></style>
+
+    </head>
+
+    <body>
+
+        <h1>Estrutura de Dados</h1>
+        <h2>PILHA</h2>
+
+        <p>
+            O último a entrar é o primeiro a sair (<b>LIFO</b>) <br>
+            O primeiro a entrar é o último a sair (<b>FILO</b>) <br>
+        </p>
+
+        <script>
+            
+            class Pilha{
+                constructor(tamanhoLimite){
+                    if(tamanhoLimite && tamanhoLimite <= 0){
+                        throw new Error('Limite não pode ser menor ou igual a 0');
+                    }
+                    this.pilha = []
+                    this.limite = tamanhoLimite || null
+                }
+
+                //adicionar elemento na pilha
+                adicionar(newElement){                  //push
+                    this.pilha.push(newElement);
+                }
+
+                //remover elemento da pilha
+                remover(){                              //pop
+                    if(this.isEmpty()){
+                        throw new Error('Pilha vazia!');
+                    }
+                    return this.pilha.pop();
+                }
+
+                //ver se a pilha está vazia
+                isEmpty(){                              //isEmpty
+                    return this.pilha.length === 0;
+                }
+
+                //ver elemento do topo da pilha
+                espiar(){                               //peek
+                    if(this.isEmpty()){
+                        return null;
+                    }
+                    return this.pilha[this.pilha.length - 1];
+                }
+
+                //limpar a pilha
+                limpar(){                               //clear
+                    this.pilha.length = 0;
+                }
+
+                //total de elementos da pilha
+                get tamanho(){                          //size
+                    return this.pilha.length;
+                }
+            }
+
+            const myStack = new Pilha(10);
+            console.log(myStack.isEmpty());             //true
+            myStack.adicionar(1);
+            myStack.adicionar(2);
+            myStack.adicionar(3);
+            console.log(myStack.isEmpty());             //false
+            console.log(myStack.espiar());              //3
+            myStack.remover();
+            myStack.remover();
+            console.log(myStack.espiar());              //1
+            myStack.remover();
+            console.log(myStack.espiar());              //null
+            console.log(myStack.isEmpty());             //true
+            console.log(myStack.tamanho);             //0
+            myStack.adicionar(4);
+            console.log(myStack.tamanho);             //1
+            console.log(myStack.isEmpty());             //false
+            myStack.limpar();
+            console.log(myStack.tamanho);             //0
+            console.log(myStack.isEmpty());             //true
+
+            
+        </script>
+        
+    </body>
+</html>

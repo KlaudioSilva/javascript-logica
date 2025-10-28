@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inserindo elementos no final e no início do Array</title>
+
+        <!--estilizando com css-->
+        <style></style>
+
+    </head>
+
+    <body>
+
+        <script>
+            const arr = [1, 9, 0, 6]    //lenght = 4 - último índice é 3
+            //          [0, 1, 2, 4]  →  esses são os índices
+
+            //vamos inserir um número 8 no final do array
+            arr[arr.length] = 8;
+
+            console.log(arr);
+
+            //usando o método push para inserir elementos no final do array
+            arr.push(3);                //inserir 1 elemento
+            arr.push(4, 1, 9, 3, 2);    //inserir vários elementos
+            console.log(arr);
+
+
+            //usando um loop para inserir um elemento no início do array
+            const arr2 = [9, 8, 7, 6]   //array com quatro elementos
+            //           [0, 1, 2, 3]   //indice do array (sempre começa no 0)
+
+            //loop para inserir o valor 20 no inicio do array
+            for(let i = arr2.length; i >= 0; i --){
+                arr2[i] = arr2[i - 1];
+            }
+
+            arr2[0] = 20;   //arr2 no indice 0 vai receber 20
+            console.log(arr2);
+
+
+            //usando agora um método do javascript para inserir elementos no início do array
+            //usamos o método UNSHIFT()
+            arr2.unshift(0, 7, 6);      //inserindo mais três elementos no início do array
+            console.log(arr2);
+        </script>
+        
+    </body>
+</html>
