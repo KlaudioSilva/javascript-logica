@@ -33,6 +33,9 @@
 
                 //adicionar elemento na pilha
                 adicionar(newElement){                  //push
+                    if(this.limite !== null && this.tamanho === this.limite){
+                        throw new Error('Pilha Cheia!')
+                    }
                     this.pilha.push(newElement);
                 }
 
@@ -68,13 +71,20 @@
                 }
             }
 
-            const myStack = new Pilha(10);
+            const myStack = new Pilha(3);
             console.log(myStack.isEmpty());             //true
             myStack.adicionar(1);
             myStack.adicionar(2);
             myStack.adicionar(3);
             console.log(myStack.isEmpty());             //false
             console.log(myStack.espiar());              //3
+
+            try{
+                myStack.adicionar(4)
+            }catch(e){
+                console.log(e);
+                console.log(e.message);
+            }
             myStack.remover();
             myStack.remover();
             console.log(myStack.espiar());              //1
