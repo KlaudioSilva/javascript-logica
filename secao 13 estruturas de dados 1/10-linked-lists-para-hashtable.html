@@ -50,7 +50,7 @@
                             } else{
                                 throw Error('Chave já existe. Mude a chave ou passe true no terceiro parâmetro para substituir o valor da chave existente')
                             }
-                            return undefined
+                            return false
                         }
                         current = current.next
                     }
@@ -66,6 +66,7 @@
                         this.tail = newNode
                     }
                     this.#size++
+                    return true
                 }
 
                 getByKey(key){                          //retorna valor pela chave
@@ -134,11 +135,68 @@
 
             
             class HashTable{
-                constructor(){
+                #size
+                constructor(maxSize){
+                    this.#size = 0
+                    this.table = []
+                    this.max = maxSize
+                }
+                hash(key){
+                    let hashValue = 0
+                    for(let i = 0; i < key.length; i++){
+                        hashValue += key.charCodeAt(i)
+                    }
+                    return hashValue % this.max
+                }
 
+                insert(key, value, replace){
+                    const index = this.hash(key)
+
+                    if(this.table[index] === undefined){
+                        this.table[index] = new LinkedList()
+                    }
+
+                    const result = this.table[index].append(key, value, replace)
+                    if(result){
+                        this.#size++
+                    }
+                }
+
+                get(key){
+                    const index = this.hash(key)
+
+                    if(this.table[index] !== undefined){
+                        //já temos uma linked list
+                        return this.table[index].getByKey(key)
+                    }
+                    return undefined
+                }
+
+                remove(key){
+                    const index = this.hash(key)
+
+                    if(this.table[index] !== undefined){
+                        const result = this.table[index].remove(key)
+                        if(result){
+                            this.#size--
+                            if(this.table[index].isEmpty()){
+                                this.table[index] = undefined
+                            }
+                        }
+                        return result
+                    }
+                    return false            //chave não encontrada
                 }
             }
-            
+
+            const table = new HashTable(97)                     // 97 é um número primo e funciona melhor em tabelas hash
+            table.insert('klaudio@dev.com', 'Klaudio Silva')
+            console.log(table.get('klaudio@dev.com'))
+            table.insert('klaudio@dev.com', 'Klaudio Kha Silva', true)
+            console.log(table.get('klaudio@dev.com'))
+            console.log(table.remove('klaudio@dev.com'))
+            console.log(table.remove('klaudio@dev.com'))
+            console.log(table.get('klaudio@dev.com'))
             
         </script>
         
