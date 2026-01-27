@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções II - Introdução à recursividade</title>
+    </head>
+    <body>
+        
+        <h1>Função Recursiva</h1>
+
+        <p>
+            Uma função recursiva, na verdade é uma função que chama ela mesma. <br>
+            Ela tem uma referência dentro do próprio corpo, da função.
+        </p>
+        
+        <p>
+            É preciso se atentar para que, ao trabalhar com funções recursivas, assim como acontece quando,  por exemplo, <br>
+            trabalhamos com loops, precisamos de uma condição de saída, porque senão a função vai ficar chamando a si mesma <br>
+            eternamente. Ou seja, precisamos em algum momento 'parar' de chamar essa mesma função, caso contrário podemos ter <br>
+            um stack Overflow, ou seja, teremos um vazamento de memória.
+        </p>
+
+        <hr>
+
+        <h2>Vamos Resolver um problema?</h2>
+        <p>
+            Crie uma função que receba dois parâmetros inteiros positivos. O primeiro será a razão da progressão geométrica e o segundo parâmetro será o limite dessa sequência de números. <br>
+            Ess função deve retornar o último número da progressão geométrica de razão n que seja menor que o limite.
+        </p>
+
+        <script>
+            
+            // pg 2 → 2, 4, 8, 16, 32
+            // pg 3 → 3, 9, 27, 81, 243
+
+            // seguindo o enunciado: getPG(2, 35) → 32
+            // seguindo o enunciado: getPG(3, 100) → 81
+
+            /*
+            function getPG(razao, limite, n=1){
+                console.log('getPG', n)
+                if(n * razao < limite){
+                    return proximoPG(razao, limite, n)
+                }
+                console.log('FIM getPG!')
+                return n
+            }
+
+            function proximoPG(razao, limite, n){
+                n = n * razao
+                console.log('proximoPG', n)
+                return getPG(razao, limite, n)
+            }
+
+            console.log(getPG(2, 35))
+            */
+
+            // transformando em uma função recursiva
+            function getPG(razao, limite, n=1){
+                console.log('getPG', n)
+                if(n * razao < limite){
+                    return getPG(razao, limite, n * razao)
+                }
+                console.log('FIM getPG!')
+                return n
+            }
+
+            // fazendo a mesma coisa usando um operador ternário
+            /*
+            function getPG(razao, limite, n=1){
+                return(n * razao < limite) ? getPG(razao, limite, n * razao) : n
+            }
+            */
+
+            console.log(getPG(2, 35))
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções II - Introdução à recursividade</title>
+    </head>
+    <body>
+        
+        <h1>Fatorial</h1>
+
+        <h2>Vamos Resolver um problema?</h2>
+        <p>
+            Crie uma função que receba um inteiro positivo e retorne o número fatorial. (O fatorial de um número N é o <br>
+            produto de todos os números inteiros positivos de 1 até N).
+        </p>
+        <p>
+            <b>Exemplos:</b><br>
+            <em>fatorial(5)</em> deve retornar <b>120</b>,   <br>
+            <em>fatorial(7)</em> deve retornar <b>5040</b>,  <br>
+        </p>
+
+        <script>
+            
+            /*
+                !3 → 1 * 2 * 3 = 6
+                !4 → 1 * 2 * 3 * 4 = 24
+            */
+
+            let count = 0
+            function fatorial(n){
+                let result = 1
+
+                for(let i = 2; i <= n; i++){
+                    count++
+                    result *= i
+                }
+                return result
+            }
+
+            console.log(fatorial(5))
+            console.log(count)
+            
+            
+            
+            // usando recursividade para resolver o problema
+            let count2 = 0
+            function fatorial2(n){
+                count2++
+                if(n < 2){
+                    return 1 //caso base. sai da recursividade
+                } else {
+                    return n * fatorial2(n - 1)
+                }
+            }
+            console.log(fatorial2(5))
+            console.log(count2)
+
+        </script>
+
+    </body>
+</html>

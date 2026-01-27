@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções II - Introdução à recursividade</title>
+    </head>
+    <body>
+        
+        <h1>Progressão Geométrica</h1>
+
+        <h2>Vamos Resolver um problema?</h2>
+        <p>
+            Crie uma função que receba dois parâmetros inteiros positivos. O primeiro será a razão da progressão geométrica e o segundo parâmetro será a quantidade de números que essa sequência deve ter. <br>
+            Essa função deve retornar o último número da progressão geométrica de razão N.
+        </p>
+        <p>
+            <b>Exemplos:</b><br>
+            <em>getPG(2,5)</em> deve retornar <b>16</b>,     <br>
+            <em>getPG(4,6)</em> deve retornar <b>1024</b>,   <br>
+            <em>getPG(2,18)</em> deve retornar <b>131072</b> <br>
+        </p>
+
+        <script>
+            
+            // pg 2 → 2, 4, 8, 16, 32
+            // pg 3 → 3, 9, 27, 81, 243
+
+            // seguindo o enunciado: getPG(2, 35) → 32
+            // seguindo o enunciado: getPG(3, 100) → 81
+
+            // resolverndo com um loop tradiconal
+            let count1 = 0
+            function getPG(razao, posicao){
+                let result = 1
+
+                for(let i = 1; i < posicao; i++){
+                    count1++
+                    result *= razao
+                }
+                return result
+            }
+            console.log(getPG(2, 5))
+            console.log(count1)
+
+
+            // resolvendo usando uma função recursiva
+            let count2 = 0
+            function getPG2(razao, posicao){
+                count2++
+                if(posicao === 1){
+                    console.log('posição é 0')
+                    return 1
+                }
+                console.log('chamar a função getPG2 passando a posição = ', posicao - 1)
+                return razao * getPG2(razao, posicao - 1)
+            }
+
+            //console.log(getPG2(2, 5))
+            //console.log(getPG2(4, 6))
+            console.log(getPG2(2, 18))
+            console.log(count2)
+
+        </script>
+
+    </body>
+</html>
