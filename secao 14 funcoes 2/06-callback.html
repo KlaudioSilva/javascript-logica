@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções II - Introdução à recursividade</title>
+    </head>
+    <body>
+        
+        <h1>Callback</h1>
+
+        <p>
+            A capacidade de uma função de se lembrar de cálculos efetuados anteriormente.
+        </p>
+        
+
+        <script>
+            
+            function executar(cb){
+                console.log('executar chamado')
+                console.log(cb)     //aqui só exibe a função no console
+                //console.log(cb())   //aqui executa a função
+                console.log(typeof cb)
+
+                if(typeof cb === 'function'){
+                    const teste = cb()
+                    console.log('---', teste, '---')
+                }
+            }
+            /*
+                Função executar, aqui está uma função.
+                Guarde ela no nome cb.
+                Mostre essa função no console.
+                Execute essa função.
+                Veja se ela realmente é uma função.
+                Se for, execute de novo.
+            */
+
+            executar(function (){
+                console.log('função anonima executada!')
+                return 'valor retornado da função de callback'
+            })
+
+            function teste(){
+                console.log('função teste executada!')
+                return 'valor retornado da função teste'
+            }
+
+            executar(teste)
+
+        </script>
+
+    </body>
+</html>

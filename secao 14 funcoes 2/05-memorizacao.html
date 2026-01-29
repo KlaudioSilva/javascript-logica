@@ -16,7 +16,46 @@
 
         <script>
             
-            
+            count = 0
+            function fibonacci(n, cache){
+                cache = cache || {}
+                /*
+                    Se cache existir, use ele.
+                    Se não existir, crie um objeto vazio {}.
+                */
+
+                count++
+                if(n <= 1){
+                    return n //caso base.
+                }
+
+                if(cache[n]){
+                    return cache[n]
+                }
+                /*
+                    Isso quer dizer:
+                    “Antes de calcular fibonacci(n), veja se eu já calculei isso antes.”
+                    Se já estiver no cache:
+                    não chama a função de novo
+                    não faz mais contas
+                    apenas retorna o valor salvo
+                */
+
+                cache[n] = fibonacci(n - 1, cache) + fibonacci(n - 2, cache)
+                return cache[n]
+            }
+            /*
+                Ele calcula:
+                    fibonacci(n - 1, cache)
+                    fibonacci(n - 2, cache)
+                Soma os dois
+                Guarda o resultado no cache:
+                cache[n] = resultado
+                Retorna o valor
+            */
+
+            console.log(fibonacci(10))
+            console.log(count)
 
         </script>
 
